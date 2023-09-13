@@ -1,0 +1,29 @@
+{
+  "name": "hcmut_ssps_nohope",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon source/index.js",
+    "beautify": "prettier --single-quote --trailing-comma all --tab-width 4 --write 'source/**/*.{js,json,scss}'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tungle203/HCMUT_SSPS_NoHope.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tungle203/HCMUT_SSPS_NoHope/issues"
+  },
+  "homepage": "https://github.com/tungle203/HCMUT_SSPS_NoHope#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "prettier": "^3.0.3"
+  }
+}
