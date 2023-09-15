@@ -1,10 +1,21 @@
 const mongoose = require('mongoose');
 
 const Printer = new mongoose.Schema({
-    address: {
+    _PrinterID: {
         type: String,
-        required: true,
+        required: true    
     },
+    
+    _Location: {
+        type: String,
+        required: true
+    },
+
+    _PaperLeft: {
+        type: Number,
+        required: true
+
+    }
 });
 
 module.exports = mongoose.model('printer', Printer);
