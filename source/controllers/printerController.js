@@ -1,7 +1,7 @@
 const Printer = require('../models/printer');
 const { multipleMongooseObject } = require('../util/mongoose');
 
-class StudentController {
+class printerController {
     print(req, res, next) {
         Printer.find({})
             .then((printer) => res.send(multipleMongooseObject(printer)))
@@ -9,4 +9,4 @@ class StudentController {
     }
 }
 
-module.exports = new StudentController();
+module.exports = new printerController();
