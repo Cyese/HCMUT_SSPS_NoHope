@@ -2,25 +2,20 @@ const mongoose = require('mongoose');
 const User = require('./user')
 const Printer = require('./printer')
 const Log = new mongoose.Schema({
-    _LogId: {
-        required: true,
-        type : mongoose.Schema.Types.ObjectId,
-    },
-
     _RequestedBy: {
         required: true,
+        type :String,
         ref: 'user'
-
     },
 
     _PrintedBy: {
         required: true,
-        ref: 'printer' 
-
+        type: String,
+        ref: 'printer'
     },
 
     _Date: {
-        required: true, 
+        required: true,
         type: Date,
     },
 
@@ -34,3 +29,5 @@ const Log = new mongoose.Schema({
         type: Number
     }
 })
+
+module.exports = mongoose.model('log', Log);
