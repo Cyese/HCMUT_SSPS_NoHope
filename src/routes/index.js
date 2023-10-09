@@ -1,17 +1,22 @@
-import History from '../pages/History';
+import DefaultLayout from '../Layout/DefaultLayout';
+import LoginLayout from '../Layout/Login';
 import Home from '../pages/Home';
+import Print from '../pages/Print';
+import History from '../pages/History';
+import Profile from '../pages/Profile';
 import Login from '../pages/LoginRegister/Login';
 import Register from '../pages/LoginRegister/Register';
-import Print from '../pages/Print';
 
-const publicRoutes = [
-  { path: '/', component: Home },
-  { path: '/print', component: Print },
-  { path: '/history', component: History },
-  { path: '/login', component: Login },
-  { path: '/register', component: Register },
+const privateRoutes = [
+  { path: '/print', component: Print, layout: DefaultLayout },
+  { path: '/history', component: History, layout: DefaultLayout },
+  { path: '/profile', component: Profile, layout: DefaultLayout },
 ];
 
-const privateRoutes = [];
+const publicRoutes = [
+  { path: '/', component: Home, layout: DefaultLayout },
+  { path: '/login', component: Login, layout: LoginLayout },
+  { path: '/register', component: Register, layout: LoginLayout },
+];
 
-export { privateRoutes, publicRoutes };
+export { publicRoutes, privateRoutes };

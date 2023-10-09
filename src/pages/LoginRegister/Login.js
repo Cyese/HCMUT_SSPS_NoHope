@@ -2,7 +2,20 @@ import React from 'react';
 import { Image, SafeAreaView, Text, TextInput, TouchableOpacity, View } from 'react-native-web';
 import { NavLink } from 'react-router-dom';
 
+import { useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import { UserContext } from '../../utils/context/userContext';
+
 const Login = () => {
+  const navigate = useNavigate();
+
+  const { login } = useContext(UserContext);
+
+  const handleLogin = () => {
+    login();
+    navigate('/');
+  };
+
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View
@@ -122,7 +135,9 @@ const Login = () => {
           </View>
 
           <TouchableOpacity
-            onPress={() => {}}
+            onPress={() => {
+              handleLogin();
+            }}
             style={{
               backgroundColor: '#210f7a',
               borderRadius: 3,

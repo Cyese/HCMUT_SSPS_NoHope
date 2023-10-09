@@ -2,7 +2,15 @@ import React from 'react';
 import { Image, SafeAreaView, Text, TextInput, TouchableOpacity, View } from 'react-native-web';
 import { NavLink } from 'react-router-dom';
 
+import { useNavigate } from 'react-router-dom';
+
 const Register = ({ navigation }) => {
+  const navigate = useNavigate();
+
+  const handleRegister = () => {
+    navigate('/login');
+  };
+
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View
@@ -154,7 +162,9 @@ const Register = ({ navigation }) => {
           </View>
 
           <TouchableOpacity
-            onPress={() => {}}
+            onPress={() => {
+              handleRegister();
+            }}
             style={{
               backgroundColor: '#210f7a',
               borderRadius: 3,
