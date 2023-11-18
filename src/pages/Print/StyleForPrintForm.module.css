@@ -1,0 +1,62 @@
+.wrapper {
+  overflow-y: scroll;
+  height: 100%;
+}
+
+.main {
+  padding: 0px 20px 70px 20px;
+  margin: 40px;
+  background-color: #fff;
+  position: relative;
+  border-radius: 30px;
+  box-shadow: 0px 0px 10px 5px rgba(30, 50, 85, 0.03);
+}
+
+.header {
+  position: relative;
+  top: -28px;
+  margin: 0px 20px;
+  font-size: 23px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.mySelect {
+  border: 1px solid black;
+}
+
+.myfile {
+  margin: 15px;
+  margin-left: 0;
+  font-size: 15px;
+}
+
+.drop_zone {
+  height: 405px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+
+.btn {
+  padding: 10px 14px;
+  margin-left: 7px;
+  font-size: 15px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background-color: #f74939;
+}
+
+.bottom-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}

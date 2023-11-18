@@ -24,7 +24,7 @@
 .content {
   flex: 1;
   height: calc(100% - var(--header-height));
-  background-color: rgb(247, 249, 254);
+  background-color: #f7f9fe;
   border-radius: 0px 0px 0px 40px;
   box-shadow: 0px 5px 20px 0px rgba(30, 50, 85, 0.1) inset;
 }

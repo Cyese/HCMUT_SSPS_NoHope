@@ -4,6 +4,7 @@ import classNames from 'classnames/bind';
 
 import styles from './Sidebar.module.css';
 import Help from '../../../components/Help';
+import logo from '../../../assets/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouse, faPrint, faClockRotateLeft, faUser, faCircleQuestion } from '@fortawesome/free-solid-svg-icons';
 
@@ -26,7 +27,7 @@ function Sidebar() {
   ];
   return (
     <div className={cx('wrapper')}>
-      <img className={cx('logo')} src="https://mybk.hcmut.edu.vn/app/asset/img/bk_logo.png" alt="logo" />
+      <img className={cx('logo')} src={logo} alt="logo" />
       <div className={cx('pages')}>
         {actions.map((action, index) => (
           <NavLink to={action.to} key={index} className={(nav) => cx('links', { active: nav.isActive })}>

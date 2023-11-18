@@ -3,9 +3,9 @@ import styles from './Deposit.module.css';
 
 const cx = classNames.bind(styles);
 
-function Deposit({ ShowOrHide, onCancel }) {
+function Deposit({ onCancel }) {
   return (
-    <div className={cx('wrapper', ShowOrHide)}>
+    <div className={cx('wrapper')}>
       <div className={cx('container')}>
         <h3 className={cx('header')}>Nạp tiền</h3>
         <div className={cx('content')}>

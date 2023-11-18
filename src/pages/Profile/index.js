@@ -1,11 +1,12 @@
-import { useState } from 'react';
-import { useContext } from 'react';
+import { useState, useContext } from 'react';
 import { UserContext } from '../../utils/context/userContext';
 import Transaction from '../../components/Transaction';
 import Deposit from '../../components/Deposit';
 
 import classNames from 'classnames/bind';
 import styles from './Profile.module.css';
+import printer from '../../assets/printer.png';
+import avatar from '../../assets/avatar.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBitcoinSign, faMedal } from '@fortawesome/free-solid-svg-icons';
 
@@ -42,12 +43,8 @@ function Profile() {
       <div className={cx('container')}>
         <div className={cx('profile-card')}>
           <div className={cx('avatar')}>
-            <img className={cx('ava-frame')} src={require('./printer.jpg')} alt="avatar" />
-            <img
-              className={cx('ava-img')}
-              src="https://pm1.aminoapps.com/6850/ee336d8649e9c828b0cc03776e493ee38f4b8776v2_00.jpg"
-              alt="avatar"
-            />
+            <img className={cx('ava-frame')} src={printer} alt="avatar" />
+            <img className={cx('ava-img')} src={avatar} alt="avatar" />
           </div>
           <h3>
             2112112 <br />
@@ -97,8 +94,8 @@ function Profile() {
           </div>
         </div>
       </div>
-      <Transaction ShowOrHide={show1 ? 'show' : 'hide'} onCancel={handleCancel1} />
-      <Deposit ShowOrHide={show2 ? 'show' : 'hide'} onCancel={handleCancel2} />
+      {show1 && <Transaction onCancel={handleCancel1} />}
+      {show2 && <Deposit onCancel={handleCancel2} />}
     </div>
   ) : (
     <h3>Bạn cần đăng nhập để xem trang này</h3>

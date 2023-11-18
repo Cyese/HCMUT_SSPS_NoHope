@@ -50,7 +50,6 @@ function Help({ ShowOrHide, onCancel }) {
         'Em không là nàng thơ Anh cũng không còn là nhạc sĩ mộng mơ Tình này nhẹ như gió Lại trĩu lên tim ta những vết hằn Tiếng yêu này mỏng manh Giờ tan vỡ, thôi cũng đành Xếp riêng những ngày tháng hồn nhiên Trả hết cho em',
       ],
     },
-    { question: 'Register', answer: ['email', 'id', 'password', 'name'] },
   ];
   const instructions2 = [
     { question: 'Payment', answer: ['email', 'id', 'password'] },
@@ -84,11 +83,13 @@ function Help({ ShowOrHide, onCancel }) {
                     <FontAwesomeIcon icon={faAngleLeft} />
                   )}
                 </h4>
-                <ul className={cx(selecting1 === index ? 'answer' : 'hide')}>
-                  {ins.answer.map((ans, i) => (
-                    <li key={i}>{ans}</li>
-                  ))}
-                </ul>
+                {selecting1 === index && (
+                  <ul className={cx('answer')}>
+                    {ins.answer.map((ans, i) => (
+                      <li key={i}>{ans}</li>
+                    ))}
+                  </ul>
+                )}
               </div>
             ))}
           </div>
@@ -109,11 +110,13 @@ function Help({ ShowOrHide, onCancel }) {
                     <FontAwesomeIcon icon={faAngleLeft} />
                   )}
                 </h4>
-                <ul className={cx(selecting2 === index ? 'answer' : 'hide')}>
-                  {ins.answer.map((ans, i) => (
-                    <li key={i}>{ans}</li>
-                  ))}
-                </ul>
+                {selecting2 === index && (
+                  <ul className={cx('answer')}>
+                    {ins.answer.map((ans, i) => (
+                      <li key={i}>{ans}</li>
+                    ))}
+                  </ul>
+                )}
               </div>
             ))}
           </div>
