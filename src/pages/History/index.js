@@ -1,6 +1,8 @@
 import { useContext } from 'react';
 import { UserContext } from '../../utils/context/userContext';
 
+import PositionCard from '../../components/PositionCard';
+
 import classNames from 'classnames/bind';
 import styles from './History.module.css';
 
@@ -24,29 +26,48 @@ function History() {
   ];
 
   return user.loggedin ? (
-    <div className={cx('wrapper')}>
-      <div className={cx('container')}>
-        <table className={cx('table')}>
-          <tr>
-            <th>STT</th>
-            <th>Ngày in</th>
-            <th>Danh sách tài liệu</th>
-            <th>Tổng số giấy</th>
-            <th>Tình trạng</th>
-          </tr>
-
-          {data.map((item, index) => (
-            <tr key={index}>
-              <td>{item.no}</td>
-              <td>{item.date}</td>
-              <td>{item.document}</td>
-              <td>{item.numpaper}</td>
-              <td>{item.status}</td>
-            </tr>
-          ))}
-        </table>
+    user.admin ? (
+      <div className={cx('admin-wrapper')}>
+        <div className={cx('container')}>
+          <PositionCard position={'h6-106'} numprinter={5} />
+          <PositionCard position={'h6-301'} numprinter={2} />
+          <PositionCard position={'h6-410'} numprinter={1} />
+          <PositionCard position={'h1-201'} numprinter={3} />
+          <PositionCard position={'h1-402'} numprinter={2} />
+          <PositionCard position={'h2-103'} numprinter={4} />
+          <PositionCard position={'h2-212'} numprinter={1} />
+          <PositionCard position={'h2-301'} numprinter={2} />
+          <PositionCard position={'h3-202'} numprinter={3} />
+          <PositionCard position={'h3-311'} numprinter={2} />
+          <PositionCard position={'h3-404'} numprinter={2} />
+        </div>
       </div>
-    </div>
+    ) : (
+      <div className={cx('user-wrapper')}>
+        <div className={cx('container')}>
+          <div className={cx('header')}>HISTORY PAGE</div>
+          <table className={cx('table')}>
+            <tr>
+              <th>STT</th>
+              <th>Ngày in</th>
+              <th>Danh sách tài liệu</th>
+              <th>Tổng số giấy</th>
+              <th>Tình trạng</th>
+            </tr>
+
+            {data.map((item, index) => (
+              <tr key={index}>
+                <td>{item.no}</td>
+                <td>{item.date}</td>
+                <td>{item.document}</td>
+                <td>{item.numpaper}</td>
+                <td>{item.status}</td>
+              </tr>
+            ))}
+          </table>
+        </div>
+      </div>
+    )
   ) : (
     <h3>Bạn cần đăng nhập để xem trang này</h3>
   );

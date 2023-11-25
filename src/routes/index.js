@@ -3,6 +3,7 @@ import LoginLayout from '../Layout/Login';
 import Home from '../pages/Home';
 import Print from '../pages/Print';
 import History from '../pages/History';
+import PositionHistory from '../pages/History/PositionHistory';
 import Profile from '../pages/Profile';
 import Login from '../pages/LoginRegister/Login';
 import Register from '../pages/LoginRegister/Register';
@@ -10,6 +11,7 @@ import Register from '../pages/LoginRegister/Register';
 const privateRoutes = [
   { path: '/print', component: Print, layout: DefaultLayout },
   { path: '/history', component: History, layout: DefaultLayout },
+  { path: '/history/:position', component: PositionHistory, layout: DefaultLayout },
   { path: '/profile', component: Profile, layout: DefaultLayout },
 ];
 

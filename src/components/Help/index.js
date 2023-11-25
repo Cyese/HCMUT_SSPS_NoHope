@@ -12,18 +12,12 @@ function Help({ ShowOrHide, onCancel }) {
   const [selecting2, setSelecting2] = useState(null);
 
   const handleSelect1 = (index) => {
-    if (selecting1 === index) {
-      setSelecting1(null);
-    } else {
-      setSelecting1(index);
-    }
+    if (selecting1 === index) setSelecting1(null);
+    else setSelecting1(index);
   };
   const handleSelect2 = (index) => {
-    if (selecting2 === index) {
-      setSelecting2(null);
-    } else {
-      setSelecting2(index);
-    }
+    if (selecting2 === index) setSelecting2(null);
+    else setSelecting2(index);
   };
 
   const instructions1 = [

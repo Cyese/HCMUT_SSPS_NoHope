@@ -9,7 +9,7 @@
   border-radius: 0px 40px 40px 0px;
   display: flex;
   flex-direction: column;
-  left: -1500px;
+  left: -1550px;
   animation: up 0.55s ease forwards;
 }
 
@@ -19,10 +19,10 @@
   }
   70% {
     opacity: 1;
-    transform: translateX(1550px);
+    transform: translateX(1600px);
   }
   100% {
-    transform: translateX(1500px);
+    transform: translateX(1550px);
     border-radius: 0;
   }
 }
@@ -36,14 +36,14 @@
 
 @keyframes down {
   0% {
-    transform: translateX(1500px);
+    transform: translateX(1550px);
   }
   70% {
     opacity: 1;
   }
   100% {
     opacity: 0.5;
-    transform: translateX(-50px);
+    transform: translateX(-150px);
     display: none;
   }
 }
@@ -120,7 +120,19 @@
 }
 .answer {
   padding: 10px;
+  max-height: 0;
+  overflow: hidden;
+  animation: down-content 4s ease forwards;
 }
+@keyframes down-content {
+  0% {
+    max-height: 0;
+  }
+  100% {
+    max-height: 5000px;
+  }
+}
+
 li {
   margin: 5px 5px 5px 30px;
 }

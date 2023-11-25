@@ -43,6 +43,7 @@
   position: relative;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  overflow-x: hidden;
   overflow-y: scroll;
 }
 

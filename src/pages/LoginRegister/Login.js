@@ -3,16 +3,16 @@ import { Image, SafeAreaView, Text, TextInput, TouchableOpacity, View } from 're
 import { NavLink } from 'react-router-dom';
 
 import { useNavigate } from 'react-router-dom';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { UserContext } from '../../utils/context/userContext';
 
 const Login = () => {
   const navigate = useNavigate();
-
+  const [mssv, setmssv] = useState();
   const { login } = useContext(UserContext);
 
   const handleLogin = () => {
-    login();
+    login(mssv);
     navigate('/');
   };
 
@@ -99,6 +99,8 @@ const Login = () => {
               }}
               inputMode="numeric"
               maxLength="7"
+              onChangeText={(value) => setmssv(value)}
+              value={mssv}
             />
 
             <Text
