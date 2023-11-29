@@ -1,8 +1,17 @@
 const express = require('express');
+const session = require('express-session')
 
 const db = require('./config/db');
 const route = require('./routes');
 const app = express();
+
+
+// Adding mock data for DB
+const User = require('./models/user');
+const Printer = require('./models/printer');
+const Log = require('./models/log');
+
+
 
 // Connect DB
 db.connect();
@@ -12,6 +21,11 @@ app.use(
     express.urlencoded({
         extended: true,
     }),
+    session({
+        secret: 'CryingWithWebServer',
+        resave: false,
+        saveUninitialized: false,
+    })
 );
 app.use(express.json());
 
@@ -20,3 +34,5 @@ route(app);
 app.listen(3000, () => {
     console.log(`Server Started at ${3000}`);
 });
+
+

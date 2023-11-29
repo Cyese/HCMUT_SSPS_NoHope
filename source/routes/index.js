@@ -1,8 +1,8 @@
-const studentRouter = require('./student');
+const userRouter = require('./user');
 const printerRouter = require('./printer');
 
 function route(app) {
-    app.use('/student', studentRouter);
+    app.use('/user', userRouter);
     app.use('/printer', printerRouter);
 }
 
