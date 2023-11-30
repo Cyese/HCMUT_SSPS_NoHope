@@ -2,29 +2,29 @@ const mongoose = require('mongoose');
 const User = require('./user')
 const Printer = require('./printer')
 const Log = new mongoose.Schema({
-    _RequestedBy: {
+    RequestedBy: {
         required: true,
         type :String,
         ref: 'user'
     },
 
-    _PrintedBy: {
+    PrintedBy: {
         required: true,
         type: String,
         ref: 'printer'
     },
 
-    _Date: {
+    Date: {
         required: true,
         type: Date,
     },
 
-    _FileName: {
+    FileName: {
         required: true,
         type: String,
     },
 
-    _PaperQuantity: {
+    PaperQuantity: {
         required: true,
         type: Number
     }

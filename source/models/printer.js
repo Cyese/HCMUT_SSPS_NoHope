@@ -1,25 +1,20 @@
 const mongoose = require('mongoose');
 const Log = require('./log')
 const Printer = new mongoose.Schema({
-    _PrinterID: {
+    PrinterID: {
         required: true,
         type: String
     },
     
-    _Location: {
+    Location: {
         required: true,
         type: String
     },
 
-    _PaperLeft: {
+    PaperLeft: {
         required: true,
         type: Number
 
-    },
-
-    _History: {
-        type: Array,
-        ref: 'log'
     }
 });
 

@@ -1,3 +1,5 @@
+/* Maybe not needed for current project*/
+
 const mongoose = require('mongoose');
 const info = new mongoose.Schema({
     ID: {
