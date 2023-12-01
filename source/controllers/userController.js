@@ -1,10 +1,18 @@
 const Users = require('../models/user');
+const Logs = require('../models/log');
 const { multipleMongooseObject } = require('../util/mongoose');
 class userController {
     show(req, res, next) {
         Users.find({})
             .then((user) => res.send(multipleMongooseObject(user)))
             .catch(next);
+    }
+    getLog(req, res) {
+        const userID = req.body.userID
+        if(!userID) return res.sendStatus(400)
+        Logs.find({ RequestedBy: userID})
+            .then((log) => res.send(multipleMongooseObject(log)))
+            .catch(err => res.send({message: err}))
     }
     makeMockData(req, res, next) {
         /*for (let i = 0; i < 20; i++) {
