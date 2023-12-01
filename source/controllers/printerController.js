@@ -11,133 +11,135 @@ class printerController {
     }
     makeMockData(req, res, next){
         res.send("Create mock data for printer")
-        // mock data for H1
+        // // mock data for H1
         // let printer = new Printer({
-        //     _PrinterID: '0001',
-        //     _Location: 'H1-101',
-        //     _PaperLeft: 1000
+        //     PrinterID: '0001',
+        //     Location: 'H1-101',
+        //     PaperLeft: 1000
         // });
         // printer.save();
         // printer = new Printer({
-        //     _PrinterID: '0002',
-        //     _Location: 'H1-101',
-        //     _PaperLeft: 1000
+        //     PrinterID: '0002',
+        //     Location: 'H1-101',
+        //     PaperLeft: 1000
         // });
         // printer.save();
         // printer = new Printer({
-        //     _PrinterID: '0003',
-        //     _Location: 'H1-101',
-        //     _PaperLeft: 1000
+        //     PrinterID: '0003',
+        //     Location: 'H1-101',
+        //     PaperLeft: 1000
         // });
         // printer.save();
         // printer = new Printer({
-        //     _PrinterID: '0004',
-        //     _Location: 'H1-301',
-        //     _PaperLeft: 1000
+        //     PrinterID: '0004',
+        //     Location: 'H1-301',
+        //     PaperLeft: 1000
         // });
         // printer.save();
         // printer = new Printer({
-        //     _PrinterID: '0005',
-        //     _Location: 'H1-301',
-        //     _PaperLeft: 1000
+        //     PrinterID: '0005',
+        //     Location: 'H1-301',
+        //     PaperLeft: 1000
         // });
         // printer.save();
         // printer = new Printer({
-        //     _PrinterID: '0006',
-        //     _Location: 'H1-301',
-        //     _PaperLeft: 1000
+        //     PrinterID: '0006',
+        //     Location: 'H1-301',
+        //     PaperLeft: 1000
         // });
         // printer.save();
         // // Some mock data for H2
         // printer = new Printer({
-        //     _PrinterID: '0007',
-        //     _Location: 'H2-101',
-        //     _PaperLeft: 1000
+        //     PrinterID: '0007',
+        //     Location: 'H2-101',
+        //     PaperLeft: 1000
         // });
         // printer.save();
-    //     let printer = new Printer({
-    //         _PrinterID: '0008',
-    //         _Location: 'H2-101',
-    //         _PaperLeft: 1000
-    //     });
-    //     printer.save();
-    //     // Some mock data for H3
-    //     printer = new Printer({
-    //         _PrinterID: '0009',
-    //         _Location: 'H3-101',
-    //         _PaperLeft: 1000
-    //     });
-    //     printer.save();
-    //     printer = new Printer({
-    //         _PrinterID: '0010',
-    //         _Location: 'H3-401',
-    //         _PaperLeft: 1000
-    //     });
-    //     printer.save();
-    //     printer = new Printer({
-    //         _PrinterID: '0011',
-    //         _Location: 'H3-401',
-    //         _PaperLeft: 1000
-    //     });
-    //     printer.save();
-    //     // Some mock data for H6
-    //     printer = new Printer({
-    //         _PrinterID: '0012',
-    //         _Location: 'H6-101',
-    //         _PaperLeft: 1000
-    //     });
-    //     printer.save();
-    //     printer = new Printer({
-    //         _PrinterID: '0013',
-    //         _Location: 'H6-101',
-    //         _PaperLeft: 1000
-    //     });
-    //     printer.save();
-    //     printer = new Printer({
-    //         _PrinterID: '0014',
-    //         _Location: 'H6-101',
-    //         _PaperLeft: 1000
-    //     });
-    //     printer.save();
-    //     printer = new Printer({
-    //         _PrinterID: '0015',
-    //         _Location: 'H6-101',
-    //         _PaperLeft: 1000
-    //     });
-    //     printer.save();
-    //     printer = new Printer({
-    //         _PrinterID: '0016',
-    //         _Location: 'H6-101',
-    //         _PaperLeft: 1000
-    //     });
-    //     printer.save();
-    //     printer = new Printer({
-    //         _PrinterID: '0017',
-    //         _Location: 'H6-602',
-    //         _PaperLeft: 1000
-    //     });
-    //     printer.save();
-    //     printer = new Printer({
-    //         _PrinterID: '0018',
-    //         _Location: 'H6-602',
-    //         _PaperLeft: 1000
-    //     });
-    //     printer.save();
-    //     printer = new Printer({
-    //         _PrinterID: '0019',
-    //         _Location: 'H6-602',
-    //         _PaperLeft: 1000
-    //     });
-    //     printer.save();
-    //     res.send('Mock data created');
+        // printer = new Printer({
+        //     PrinterID: '0008',
+        //     Location: 'H2-101',
+        //     PaperLeft: 1000
+        // });
+        // printer.save();
+        // // Some mock data for H3
+        // printer = new Printer({
+        //     PrinterID: '0009',
+        //     Location: 'H3-101',
+        //     PaperLeft: 1000
+        // });
+        // printer.save();
+        // printer = new Printer({
+        //     PrinterID: '0010',
+        //     Location: 'H3-401',
+        //     PaperLeft: 1000
+        // });
+        // printer.save();
+        // printer = new Printer({
+        //     PrinterID: '0011',
+        //     Location: 'H3-401',
+        //     PaperLeft: 1000
+        // });
+        // printer.save();
+        // // Some mock data for H6
+        // printer = new Printer({
+        //     PrinterID: '0012',
+        //     Location: 'H6-101',
+        //     PaperLeft: 1000
+        // });
+        // printer.save();
+        // printer = new Printer({
+        //     PrinterID: '0013',
+        //     Location: 'H6-101',
+        //     PaperLeft: 1000
+        // });
+        // printer.save();
+        // printer = new Printer({
+        //     PrinterID: '0014',
+        //     Location: 'H6-101',
+        //     PaperLeft: 1000
+        // });
+        // printer.save();
+        // printer = new Printer({
+        //     PrinterID: '0015',
+        //     Location: 'H6-101',
+        //     PaperLeft: 1000
+        // });
+        // printer.save();
+        // printer = new Printer({
+        //     PrinterID: '0016',
+        //     Location: 'H6-101',
+        //     PaperLeft: 1000
+        // });
+        // printer.save();
+        // printer = new Printer({
+        //     PrinterID: '0017',
+        //     Location: 'H6-602',
+        //     PaperLeft: 1000
+        // });
+        // printer.save();
+        // printer = new Printer({
+        //     PrinterID: '0018',
+        //     Location: 'H6-602',
+        //     PaperLeft: 1000
+        // });
+        // printer.save();
+        // printer = new Printer({
+        //     PrinterID: '0019',
+        //     Location: 'H6-602',
+        //     PaperLeft: 1000
+        // });
+        // printer.save();
+        res.send('Mock data created');
     }
 
     makeMockLog(req, res, next){
         let UserData = User.find({}).then((users) => {
             users.forEach((user) => {
-                let  ID = user._UserID;
-                let Used = user._TotalUsed;
-                // // Use _UserID and _TotalUsed as needed
+                let  ID = user.UserID;
+                let Used = user.TotalUsed;
+
+
+
                 console.log(ID, Used);
             });
         });

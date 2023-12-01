@@ -1,0 +1,320 @@
+[{
+  "_id": {
+    "$oid": "656972103b68f9639c81c05a"
+  },
+  "UserID": "2181367",
+  "password": "123456",
+  "Name": "Nguyen Van A",
+  "PaperLeft": 999,
+  "TotalUsed": 1,
+  "Birthdate": {
+    "$date": "2003-09-24T00:00:00.000Z"
+  },
+  "Email": "SV_2181367@hcmut.edu.vn",
+  "ContactNumber": "0",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "656972103b68f9639c81c05b"
+  },
+  "UserID": "2162936",
+  "password": "123456",
+  "Name": "Nguyen Van A",
+  "PaperLeft": 750,
+  "TotalUsed": 250,
+  "Birthdate": {
+    "$date": "2003-08-04T00:00:00.000Z"
+  },
+  "Email": "SV_2162936@hcmut.edu.vn",
+  "ContactNumber": "0",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "656972103b68f9639c81c05c"
+  },
+  "UserID": "2167670",
+  "password": "123456",
+  "Name": "Nguyen Van A",
+  "PaperLeft": 220,
+  "TotalUsed": 780,
+  "Birthdate": {
+    "$date": "2003-05-02T00:00:00.000Z"
+  },
+  "Email": "SV_2167670@hcmut.edu.vn",
+  "ContactNumber": "0",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "656972103b68f9639c81c05f"
+  },
+  "UserID": "2121823",
+  "password": "123456",
+  "Name": "Nguyen Van A",
+  "PaperLeft": 929,
+  "TotalUsed": 71,
+  "Birthdate": {
+    "$date": "2003-01-10T00:00:00.000Z"
+  },
+  "Email": "SV_2121823@hcmut.edu.vn",
+  "ContactNumber": "0",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "656972103b68f9639c81c060"
+  },
+  "UserID": "2103521",
+  "password": "123456",
+  "Name": "Nguyen Van A",
+  "PaperLeft": 207,
+  "TotalUsed": 793,
+  "Birthdate": {
+    "$date": "2003-04-22T00:00:00.000Z"
+  },
+  "Email": "SV_2103521@hcmut.edu.vn",
+  "ContactNumber": "0",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "656972103b68f9639c81c061"
+  },
+  "UserID": "2176106",
+  "password": "123456",
+  "Name": "Nguyen Van A",
+  "PaperLeft": 360,
+  "TotalUsed": 640,
+  "Birthdate": {
+    "$date": "2003-03-02T00:00:00.000Z"
+  },
+  "Email": "SV_2176106@hcmut.edu.vn",
+  "ContactNumber": "0",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "656972103b68f9639c81c062"
+  },
+  "UserID": "2170914",
+  "password": "123456",
+  "Name": "Nguyen Van A",
+  "PaperLeft": 216,
+  "TotalUsed": 784,
+  "Birthdate": {
+    "$date": "2003-10-06T00:00:00.000Z"
+  },
+  "Email": "SV_2170914@hcmut.edu.vn",
+  "ContactNumber": "0",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "656972103b68f9639c81c063"
+  },
+  "UserID": "2194061",
+  "password": "123456",
+  "Name": "Nguyen Van A",
+  "PaperLeft": 649,
+  "TotalUsed": 351,
+  "Birthdate": {
+    "$date": "2003-08-17T00:00:00.000Z"
+  },
+  "Email": "SV_2194061@hcmut.edu.vn",
+  "ContactNumber": "0",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "656972103b68f9639c81c064"
+  },
+  "UserID": "2167727",
+  "password": "123456",
+  "Name": "Nguyen Van A",
+  "PaperLeft": 24,
+  "TotalUsed": 976,
+  "Birthdate": {
+    "$date": "2003-10-30T00:00:00.000Z"
+  },
+  "Email": "SV_2167727@hcmut.edu.vn",
+  "ContactNumber": "0",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "656972103b68f9639c81c05d"
+  },
+  "UserID": "2126270",
+  "password": "123456",
+  "Name": "Nguyen Van A",
+  "PaperLeft": 452,
+  "TotalUsed": 548,
+  "Birthdate": {
+    "$date": "2003-07-30T00:00:00.000Z"
+  },
+  "Email": "SV_2126270@hcmut.edu.vn",
+  "ContactNumber": "0",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "656972103b68f9639c81c05e"
+  },
+  "UserID": "2171731",
+  "password": "123456",
+  "Name": "Nguyen Van A",
+  "PaperLeft": 731,
+  "TotalUsed": 269,
+  "Birthdate": {
+    "$date": "2003-12-02T00:00:00.000Z"
+  },
+  "Email": "SV_2171731@hcmut.edu.vn",
+  "ContactNumber": "0",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "656972103b68f9639c81c067"
+  },
+  "UserID": "2123619",
+  "password": "123456",
+  "Name": "Nguyen Van A",
+  "PaperLeft": 913,
+  "TotalUsed": 87,
+  "Birthdate": {
+    "$date": "2003-03-04T00:00:00.000Z"
+  },
+  "Email": "SV_2123619@hcmut.edu.vn",
+  "ContactNumber": "0",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "656972103b68f9639c81c068"
+  },
+  "UserID": "2110731",
+  "password": "123456",
+  "Name": "Nguyen Van A",
+  "PaperLeft": 352,
+  "TotalUsed": 648,
+  "Birthdate": {
+    "$date": "2003-01-17T00:00:00.000Z"
+  },
+  "Email": "SV_2110731@hcmut.edu.vn",
+  "ContactNumber": "0",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "656972103b68f9639c81c069"
+  },
+  "UserID": "2184489",
+  "password": "123456",
+  "Name": "Nguyen Van A",
+  "PaperLeft": 93,
+  "TotalUsed": 907,
+  "Birthdate": {
+    "$date": "2003-12-06T00:00:00.000Z"
+  },
+  "Email": "SV_2184489@hcmut.edu.vn",
+  "ContactNumber": "0",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "656972103b68f9639c81c06a"
+  },
+  "UserID": "2125321",
+  "password": "123456",
+  "Name": "Nguyen Van A",
+  "PaperLeft": 359,
+  "TotalUsed": 641,
+  "Birthdate": {
+    "$date": "2003-06-13T00:00:00.000Z"
+  },
+  "Email": "SV_2125321@hcmut.edu.vn",
+  "ContactNumber": "0",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "656972103b68f9639c81c06b"
+  },
+  "UserID": "2140568",
+  "password": "123456",
+  "Name": "Nguyen Van A",
+  "PaperLeft": 462,
+  "TotalUsed": 538,
+  "Birthdate": {
+    "$date": "2003-10-25T00:00:00.000Z"
+  },
+  "Email": "SV_2140568@hcmut.edu.vn",
+  "ContactNumber": "0",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "656972103b68f9639c81c06c"
+  },
+  "UserID": "2150488",
+  "password": "123456",
+  "Name": "Nguyen Van A",
+  "PaperLeft": 130,
+  "TotalUsed": 870,
+  "Birthdate": {
+    "$date": "2003-06-10T00:00:00.000Z"
+  },
+  "Email": "SV_2150488@hcmut.edu.vn",
+  "ContactNumber": "0",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "656972103b68f9639c81c06d"
+  },
+  "UserID": "2158174",
+  "password": "123456",
+  "Name": "Nguyen Van A",
+  "PaperLeft": 603,
+  "TotalUsed": 397,
+  "Birthdate": {
+    "$date": "2003-09-27T00:00:00.000Z"
+  },
+  "Email": "SV_2158174@hcmut.edu.vn",
+  "ContactNumber": "0",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "656972103b68f9639c81c065"
+  },
+  "UserID": "2136784",
+  "password": "123456",
+  "Name": "Nguyen Van A",
+  "PaperLeft": 944,
+  "TotalUsed": 56,
+  "Birthdate": {
+    "$date": "2003-10-08T00:00:00.000Z"
+  },
+  "Email": "SV_2136784@hcmut.edu.vn",
+  "ContactNumber": "0",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "656972103b68f9639c81c066"
+  },
+  "UserID": "2193260",
+  "password": "123456",
+  "Name": "Nguyen Van A",
+  "PaperLeft": 655,
+  "TotalUsed": 345,
+  "Birthdate": {
+    "$date": "2003-09-16T00:00:00.000Z"
+  },
+  "Email": "SV_2193260@hcmut.edu.vn",
+  "ContactNumber": "0",
+  "__v": 0
+}]
