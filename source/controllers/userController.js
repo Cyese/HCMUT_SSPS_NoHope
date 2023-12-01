@@ -1,5 +1,6 @@
 const Users = require('../models/user');
 const Logs = require('../models/log');
+const Printer = require('../models/printer');
 const { multipleMongooseObject } = require('../util/mongoose');
 class userController {
     show(req, res, next) {
@@ -37,6 +38,59 @@ class userController {
         Users.find({})
             .then((user) => res.send(multipleMongooseObject(user)))
             .catch(next);
+    }
+    async print(req, res, next) {
+        const data = {
+            user_id: req.body.id,
+            printer_id: req.body.printer_id,
+            file_name: req.body.file_name,
+            file_page: req.body.file_page
+        };
+    
+        try {
+            const user = await Users.findOne({ ID: data.user_id });
+            const printer = await Printer.findOne({ ID: data.printer_id });
+    
+            if (user._PaperLeft < data.file_page) {
+                return res.status(409).send('User not enough paper left');
+            }
+    
+            if (printer._PaperLeft < data.file_page) {
+                return res.status(409).send('Printer not enough paper left');
+            }
+    
+            // Update user and printer data
+            await Users.updateOne({ ID: data.user_id }, {
+                $inc: {
+                    _PaperLeft: -data.file_page,
+                    _TotalUsed: data.file_page
+                }
+            });
+    
+            await Printer.updateOne({ ID: data.printer_id }, {
+                $inc: {
+                    _PaperLeft: -data.file_page
+                }
+            });
+    
+            // Create log entry
+            const log = new Log({
+                id: mongoose.Types.ObjectId(),
+                RequestedBy: user._UserId,
+                PrintedBy: printer._PrinterID,
+                Date: new Date(),
+                FileName: data.file_name,
+                PaperQuantity: data.file_page
+            });
+    
+            // Save log entry to the database
+            await log.save();
+    
+            res.status(201).send('Printed successfully');
+        } catch (error) {
+            console.error(error);
+            res.status(500).send('Server Error');
+        }
     }
 }
 
