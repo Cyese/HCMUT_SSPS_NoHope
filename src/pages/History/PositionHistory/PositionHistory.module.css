@@ -94,7 +94,18 @@
 
 .wrapper .table td {
   text-align: center;
-  padding: 10px;
+  padding: 10px 15px;
+}
+.wrapper .table td:last-child {
+  padding: 0;
+}
+.wrapper .done {
+  font-size: 20px;
+  color: #21be4d;
+}
+.wrapper .fail {
+  font-size: 25px;
+  color: #e00;
 }
 
 .wrapper .table tr:nth-child(even) {

@@ -18,6 +18,16 @@
   text-align: center;
   background-color: #fff;
   border-radius: 10px;
+  scale: 0.5;
+  opacity: 0;
+  transform-origin: top left;
+  animation: showpopup 0.2s ease-out forwards;
+}
+@keyframes showpopup {
+  100% {
+    scale: 1;
+    opacity: 1;
+  }
 }
 
 .title {

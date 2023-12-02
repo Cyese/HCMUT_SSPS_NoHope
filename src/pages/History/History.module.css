@@ -15,12 +15,14 @@
 .user-wrapper {
   height: 100%;
   width: 100%;
+  overflow-x: hidden;
   overflow-y: scroll;
 }
 .user-wrapper .container {
   margin: 50px auto;
-  padding: 0px 30px 30px 30px;
-  width: 85%;
+  padding-left: 30px;
+  padding-right: 25px;
+  width: 86%;
   background-color: white;
   border-radius: 30px;
   box-shadow: 0px 0px 10px 5px rgba(30, 50, 85, 0.03);
@@ -37,6 +39,11 @@
   background-color: dodgerblue;
   color: white;
   text-align: center;
+}
+
+.user-wrapper .wrap-table {
+  height: 55vh;
+  overflow-y: scroll;
 }
 
 .user-wrapper .table {
@@ -59,18 +66,39 @@
 
 .user-wrapper .table td {
   text-align: center;
-  padding: 10px;
+  padding: 10px 15px;
+}
+.user-wrapper .table td:last-child {
+  padding: 0;
+}
+.user-wrapper .done {
+  font-size: 20px;
+  color: #21be4d;
+}
+.user-wrapper .fail {
+  font-size: 25px;
+  color: #e00;
 }
 
-.user-wrapper .table tr:nth-child(even) {
+.user-wrapper tr:nth-child(even) {
   background-color: #f3f8fe;
 }
-.user-wrapper .table tr:nth-child(odd) {
+.user-wrapper tr:nth-child(odd) {
   background-color: #fff;
 }
-.user-wrapper .table tr:last-child {
-  border-bottom: 2px solid dodgerblue;
+.user-wrapper tr:last-child {
+  border-bottom: 3px solid dodgerblue;
 }
-.user-wrapper .table tr:hover {
+.user-wrapper tr:hover {
   background-color: #e1e6ec;
+}
+
+.user-wrapper .total-paper {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  gap: 10px;
+}
+.user-wrapper h3 {
+  font-size: 20px;
 }

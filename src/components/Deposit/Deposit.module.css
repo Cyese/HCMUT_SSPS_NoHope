@@ -14,10 +14,24 @@
   top: 50%;
   left: 52%;
   transform: translate(-50%, -50%);
-  height: 55%;
   box-sizing: border-box;
   background-color: white;
   border-radius: 15px;
+  scale: 0.5;
+  opacity: 0;
+  transform-origin: top left;
+  animation: showpopup 0.2s ease-out forwards;
+}
+@keyframes showpopup {
+  100% {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+.content {
+  max-height: max-content;
+  padding-bottom: 30px;
 }
 
 .header {
@@ -35,13 +49,15 @@
   padding: 6px;
   border-radius: 12px;
   font-size: 14px;
-  color: #0088ff;
-  transition: 0.25s;
+  color: white;
+  background-color: #0088ff;
   border: 2px solid #0088ff;
+  transition: 0.25s;
 }
 
 .cancel-btn:hover {
-  color: white;
-  background-color: #0088ff;
+  color: #0088ff;
+  background-color: transparent;
+  border: 2px solid #0088ff;
   cursor: pointer;
 }

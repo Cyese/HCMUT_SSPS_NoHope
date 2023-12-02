@@ -14,12 +14,11 @@ import 'tippy.js/dist/tippy.css';
 const cx = classNames.bind(styles);
 
 function Header() {
-  const navigate = useNavigate();
-
   const { user, logout } = useContext(UserContext);
 
-  const [show, setShow] = useState(false);
+  const navigate = useNavigate();
 
+  const [show, setShow] = useState(false);
   const handleCancel = () => {
     setShow(false);
   };
@@ -28,23 +27,24 @@ function Header() {
     logout();
     navigate('/login');
   };
-
   const handleLogin = () => {
     navigate('/login');
   };
 
   return (
     <div className={cx('wrapper')}>
-      <h2 className={cx('app-name')}>PRINTER</h2>
+      <h2 className={cx('app-name')}>HCMUT SSPS</h2>
       {user.loggedin ? (
         <div className={cx('user')}>
           <img className={cx('user-ava')} src={avatar} alt="avatar" />
           <div className={cx('user-info')}>
             <h4 className={cx('user-info-name')}>Nguyen Van A</h4>
-            <div className={cx('user-info-balance')}>
-              <FontAwesomeIcon icon={faBitcoinSign} className={cx('balance-icon')} /> &nbsp;
-              <span>4.500</span>
-            </div>
+            {!user.admin && (
+              <div className={cx('user-info-balance')}>
+                <FontAwesomeIcon icon={faBitcoinSign} className={cx('balance-icon')} /> &nbsp;
+                <span>4.500</span>
+              </div>
+            )}
           </div>
           <Tippy content="Log out">
             <button

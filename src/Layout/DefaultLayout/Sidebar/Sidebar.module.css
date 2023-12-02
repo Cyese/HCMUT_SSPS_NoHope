@@ -10,13 +10,13 @@
 }
 
 .logo {
-  margin-top: 25px;
-  width: 45%;
+  margin-top: 30px;
+  width: 65%;
 }
 
 .pages {
   width: 100%;
-  margin-bottom: 20px;
+  margin: auto;
 }
 
 .links {
@@ -76,7 +76,7 @@
   }
 }
 
-@media (max-width: 530px) {
+@media (max-width: 550px) {
   .wrapper {
     flex-direction: row;
     justify-content: center;
@@ -89,7 +89,6 @@
   .pages {
     width: 100%;
     display: flex;
-    margin: auto;
   }
   .links {
     flex: 1;
@@ -118,4 +117,8 @@
   .help-text {
     display: none;
   }
+}
+
+.pseudo-div {
+  height: 80px;
 }

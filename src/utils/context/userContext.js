@@ -5,26 +5,28 @@ const UserContext = React.createContext({ mssv: '', loggedin: false, admin: fals
 function UserProvider({ children }) {
   const [user, setUser] = useState({ mssv: '', loggedin: false, admin: false });
 
-  // Login updates the user data with a mssv parameter
-  const login = (mssv) => {
+  const login = (mssv, token) => {
     var isadmin;
     if (mssv === '1') isadmin = true;
     else isadmin = false;
 
-    setUser((user) => ({
+    setUser({
       mssv: mssv,
       loggedin: true,
       admin: isadmin,
-    }));
+    });
+    localStorage.setItem('mssv', mssv);
+    // localStorage.setItem('token', token);
   };
 
-  // Logout updates the user data to default
   const logout = () => {
-    setUser((user) => ({
+    localStorage.removeItem('mssv');
+    // localStorage.removeItem('token');
+    setUser({
       mssv: '',
       loggedin: false,
       admin: false,
-    }));
+    });
   };
 
   return <UserContext.Provider value={{ user, login, logout }}>{children}</UserContext.Provider>;

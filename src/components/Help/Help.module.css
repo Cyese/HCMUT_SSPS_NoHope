@@ -153,14 +153,16 @@ li::before {
   width: 55px;
   padding: 6px;
   background-color: transparent;
+  color: white;
   font-size: 15px;
-  color: #0078ee;
   border-radius: 12px;
+  background-color: #0088ff;
   border: 2px solid #0088ff;
-  transition: 0.25s;
+  cursor: pointer;
+  transition: 0.2s;
 }
 .cancel-btn:hover {
-  color: white;
-  background-color: #0088ff;
-  cursor: pointer;
+  color: #0078ee;
+  background-color: transparent;
+  border: 2px solid #0088ff;
 }

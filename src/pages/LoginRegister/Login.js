@@ -5,15 +5,29 @@ import { NavLink } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import { UserContext } from '../../utils/context/userContext';
+// import axios from '../../utils/api/axios';
 
 const Login = () => {
   const navigate = useNavigate();
-  const [mssv, setmssv] = useState();
+  const [mssv, setMssv] = useState('');
+  const [password, setPassword] = useState('');
   const { login } = useContext(UserContext);
 
   const handleLogin = () => {
+    if (!mssv || !password) {
+      alert('Missing value !');
+      return;
+    }
+    // const res = axios.post('/');
+    // if (res && res.token) {
+    //   localStorage.setItem('token', res.token);
+    //   login(mssv, res.token);
     login(mssv);
     navigate('/');
+    // } else if (res && res.status === 400) {
+    //   alert('Wrong mssv or password !');
+    //   return;
+    // }
   };
 
   return (
@@ -39,7 +53,7 @@ const Login = () => {
             borderTopRightRadius: 5,
           }}
         >
-          <Image style={{ width: 50, height: 50, margin: 5 }} source={require('./img/bk_logo.png')} />
+          <Image style={{ width: 50, height: 50, margin: 5 }} source={require('../../assets/logo.png')} />
           <Text
             style={{
               paddingLeft: 20,
@@ -99,7 +113,7 @@ const Login = () => {
               }}
               inputMode="numeric"
               maxLength="7"
-              onChangeText={(value) => setmssv(value)}
+              onChangeText={(value) => setMssv(value)}
               value={mssv}
             />
 
@@ -122,6 +136,8 @@ const Login = () => {
                 borderColor: '#ccc',
               }}
               secureTextEntry={true}
+              onChangeText={(value) => setPassword(value)}
+              value={password}
             />
             <TouchableOpacity onPress={() => {}}>
               <Text
@@ -137,9 +153,7 @@ const Login = () => {
           </View>
 
           <TouchableOpacity
-            onPress={() => {
-              handleLogin();
-            }}
+            onPress={handleLogin}
             style={{
               backgroundColor: '#210f7a',
               borderRadius: 3,

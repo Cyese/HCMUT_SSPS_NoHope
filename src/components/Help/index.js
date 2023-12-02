@@ -24,31 +24,47 @@ function Help({ ShowOrHide, onCancel }) {
     {
       question: 'Login',
       answer: [
-        'email',
-        'id',
-        'password ewh fhfhhfehfhsfjsndf  afnfjlkdfdkdlshufdsnfdkg bdjsfbgfndf fdnfn dnflfn sdf dsfdjfsdjkbfsjodbg dbgfkjdfbdsjkbg ',
+        'username: tên đăng nhập (gồm chữ và số; không dấu, khoảng trắng, ký tự đặc biệt). ',
+        'password: mật khẩu của tài khoản MyBK',
       ],
     },
     {
       question: 'App use',
-      answer: ['email', 'id '],
+      answer: [
+        'Đăng nhập vào trang web với tài khoản MyBK.',
+        'Chọn các nút ở thanh sidebar bên trái để chuyển các trang dịch vụ.',
+        'Nhấn nút logout ở phía trên bên phải để đăng xuất khỏi tài khoản hiện tại.',
+      ],
     },
     {
       question: 'Print',
       answer: [
-        'Anh đã không giữ được nhiều hạnh phúc cho em Nhiều khi giận nhau nước mắt em cứ rơi thật nhiều Anh xin lỗi em hãy tha thứ cho anh lần này Đừng rời xa anh em nói đi em rất yêu anh Nhưng nay cuộc sống không như anh đã ước mong Của một tình yêu sẽ hạnh phúc giống như bao người Một người yêu em, yêu em đắm say một người bên em bên em mỗi khi Mà giờ đây nước mắt anh đã rơi rồi.',
-        'email',
-        'Thật ra anh đâu, đâu có muốn chia tay như vậy Người yêu em hỡi anh lại nhớ em đang ở đâu Bàn tay nhỏ bé khuôn mặt ấy sao lại đổi thay để anh nơi này Ngoài trời mưa cứ rơi lặng thầm, chỉ còn mình anh. Thật sự nhiều khi muốn nhắn tin gửi cho em nhiều Lại sợ người ấy đang hạnh phúc vui bên một Tình yêu đã chết hai người dưng mai này chúng ta có duyên gặp lại Thì anh vẫn luôn luôn yêu em như lúc mới yêu.',
-        'Em, ngày em đánh rơi nụ cười vào anh Có nghĩ sau này em sẽ chờ Và vô tư cho đi hết những ngây thơ Anh, một người hát mãi những điều mong manh Lang thang tìm niềm vui đã lỡ Chẳng buồn dặn lòng quên hết những chơ vơ Ta yêu nhau bằng nỗi nhớ chưa khô trên những bức thư Ta đâu bao giờ có lỗi khi không nghe tim chối từ Chỉ tiếc rằng',
-        'password',
-        'Em không là nàng thơ Anh cũng không còn là nhạc sĩ mộng mơ Tình này nhẹ như gió Lại trĩu lên tim ta những vết hằn Tiếng yêu này mỏng manh Giờ tan vỡ, thôi cũng đành Xếp riêng những ngày tháng hồn nhiên Trả hết cho em',
+        'Đến trang Print tải lên file cần in, sau đó chọn kiểu in (in thường, in màu,...) và chọn số lượng bản sao.',
+        'Nhấn nút preview để xem trước file hoặc nhấn nút delete để xóa file.',
+        'Cần kiểm tra số dư và nạp tiền trước khi xác nhận in.',
+        'Chọn địa điểm phù hợp và xác nhận in.',
       ],
     },
   ];
   const instructions2 = [
-    { question: 'Payment', answer: ['email', 'id', 'password'] },
-    { question: 'Blabla', answer: ['email', 'id'] },
-    { question: 'Blabla', answer: ['email'] },
+    {
+      question: 'Payment',
+      answer: [
+        'Trong lúc in: nếu số dư đủ để in, số dư sẽ tự động bị trừ đi khi xác nhận in.',
+        'Nạp tiền: qua BKPay, qua ví điện tử Momo, internet banking với tài khoản ngân hàng.',
+      ],
+    },
+    {
+      question: 'User infomation',
+      answer: [
+        'Đến trang Profile để xem thông tin cá nhân',
+        'Liên hệ email support@nohope.com để cập nhật thông tin cá nhân.',
+      ],
+    },
+    {
+      question: 'History',
+      answer: ['Đến trang History, xem các thông tin chi tiết về các tài liệu đã in, ngày in,...'],
+    },
   ];
 
   return (
@@ -57,7 +73,7 @@ function Help({ ShowOrHide, onCancel }) {
         <button className={cx('back-btn')} onClick={onCancel}>
           <FontAwesomeIcon icon={faAngleLeft} />
         </button>
-        <h3>Hướng dẫn</h3>
+        <h3>Instruction</h3>
       </header>
       <div className={cx('container')}>
         <div className={cx('content')}>

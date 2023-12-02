@@ -34,7 +34,7 @@ const Register = ({ navigation }) => {
             borderTopRightRadius: 5,
           }}
         >
-          <Image style={{ width: 50, height: 50, margin: 5 }} source={require('./img/bk_logo.png')} />
+          <Image style={{ width: 50, height: 50, margin: 5 }} source={require('../../assets/logo.png')} />
           <Text
             style={{
               paddingLeft: 20,

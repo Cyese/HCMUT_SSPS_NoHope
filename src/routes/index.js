@@ -7,18 +7,23 @@ import PositionHistory from '../pages/History/PositionHistory';
 import Profile from '../pages/Profile';
 import Login from '../pages/LoginRegister/Login';
 import Register from '../pages/LoginRegister/Register';
+import { faHouse, faPrint, faClockRotateLeft, faUser } from '@fortawesome/free-solid-svg-icons';
 
-const privateRoutes = [
-  { path: '/print', component: Print, layout: DefaultLayout },
-  { path: '/history', component: History, layout: DefaultLayout },
-  { path: '/history/:position', component: PositionHistory, layout: DefaultLayout },
-  { path: '/profile', component: Profile, layout: DefaultLayout },
-];
-
-const publicRoutes = [
-  { path: '/', component: Home, layout: DefaultLayout },
+const userRoutes = [
+  { path: '/', component: Home, layout: DefaultLayout, title: 'Home', icon: faHouse },
   { path: '/login', component: Login, layout: LoginLayout },
   { path: '/register', component: Register, layout: LoginLayout },
+  { path: '/print', component: Print, layout: DefaultLayout, title: 'Print', icon: faPrint },
+  { path: '/history', component: History, layout: DefaultLayout, title: 'History', icon: faClockRotateLeft },
+  { path: '/profile', component: Profile, layout: DefaultLayout, title: 'Profile', icon: faUser },
 ];
 
-export { publicRoutes, privateRoutes };
+const adminRoutes = [
+  { path: '/', component: Home, layout: DefaultLayout, title: 'Home', icon: faHouse },
+  { path: '/login', component: Login, layout: LoginLayout },
+  { path: '/register', component: Register, layout: LoginLayout },
+  { path: '/history', component: History, layout: DefaultLayout, title: 'History', icon: faClockRotateLeft },
+  { path: '/history/:position', component: PositionHistory, layout: DefaultLayout },
+];
+
+export { userRoutes, adminRoutes };

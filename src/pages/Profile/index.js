@@ -98,7 +98,7 @@ function Profile() {
       {show2 && <Deposit onCancel={handleCancel2} />}
     </div>
   ) : (
-    <h3>Bạn cần đăng nhập để xem trang này</h3>
+    <h3 style={{ margin: '20px' }}>Bạn cần đăng nhập để xem trang này</h3>
   );
 }
 
