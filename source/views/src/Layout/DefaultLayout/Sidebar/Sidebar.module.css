@@ -1,0 +1,124 @@
+.wrapper {
+  z-index: 5;
+  height: 100%;
+  width: 13vw;
+  background-color: #1c1d2b;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo {
+  margin-top: 30px;
+  width: 65%;
+}
+
+.pages {
+  width: 100%;
+  margin: auto;
+}
+
+.links {
+  display: flex;
+  width: 100%;
+  height: 8.5vh;
+  min-height: 40px;
+  padding-left: 25%;
+  margin-top: 5px;
+  align-items: center;
+  line-height: 40px;
+  font-size: 17px;
+  justify-content: left;
+  color: rgb(219, 210, 210);
+  background-color: #1c1d2b;
+  border-radius: 0px 30px 30px 0px;
+  transition: 0.2s;
+  box-sizing: border-box;
+}
+.links:hover {
+  cursor: pointer;
+  color: white;
+  border-radius: 0;
+  background-color: #252737;
+}
+.links.active {
+  width: 110%;
+  font-size: 18px;
+  color: #008cff;
+  background-color: #313245;
+  border-radius: 0px 30px 30px 0px;
+  box-shadow: 0px 0px 2px 5px rgba(34, 54, 85, 0.2);
+}
+
+.help-btn {
+  margin: 5px 0px 25px;
+  font-size: 15px;
+  color: rgb(219, 210, 210);
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.15s;
+}
+.help-icon {
+  font-size: 25px;
+}
+.help-btn:hover {
+  color: #0071ce;
+}
+
+@media (max-width: 850px) {
+  .wrapper {
+    width: 45px;
+    position: unset;
+  }
+  .title {
+    display: none;
+  }
+}
+
+@media (max-width: 550px) {
+  .wrapper {
+    flex-direction: row;
+    justify-content: center;
+    height: 48px;
+    width: 100%;
+  }
+  .logo {
+    display: none;
+  }
+  .pages {
+    width: 100%;
+    display: flex;
+  }
+  .links {
+    flex: 1;
+    height: 100%;
+    min-height: 50px;
+    justify-content: center;
+    font-size: 20px;
+    padding-left: 0;
+    margin: 0;
+    border-radius: 0;
+  }
+  .links.active {
+    width: 50px;
+    font-size: 20px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .help-btn {
+    position: fixed;
+    right: 12px;
+    bottom: 30px;
+  }
+  .help-icon {
+    font-size: 28px;
+  }
+  .help-text {
+    display: none;
+  }
+}
+
+.pseudo-div {
+  height: 80px;
+}

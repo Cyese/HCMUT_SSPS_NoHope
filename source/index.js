@@ -11,7 +11,7 @@ const User = require('./models/user');
 const Printer = require('./models/printer');
 const Log = require('./models/log');
 
-
+const PORT = 8080;
 
 // Connect DB
 db.connect();
@@ -31,8 +31,8 @@ app.use(express.json());
 
 route(app);
 
-app.listen(3000, () => {
-    console.log(`Server Started at ${3000}`);
+app.listen(PORT, () => {
+    console.log(`Server Started at ${PORT}`);
 });
 
 

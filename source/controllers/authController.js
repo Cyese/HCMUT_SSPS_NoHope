@@ -4,6 +4,8 @@ const bycrypt = require('bcrypt')
 const { multipleMongooseObject } = require('../util/mongoose');
 const { response } = require('express');
 
+// Not Used Do not call !// 
+
 class authenticationController {
     async signup(req, res, next) {
         const data = {
@@ -31,7 +33,7 @@ class authenticationController {
         res.status(201).send('ID succesfully registered');
         res.redirect('sigin')
     }
-    async signin(req,res,next){
+    async login(req,res,next){
         const data = {
             SignInID: req.body.ID,
             password: req.body.password
@@ -39,7 +41,7 @@ class authenticationController {
         const user = User.findOne({name: SignInID});  
         if (user === null)
             return res.status(404).send('User id not found');
-        const validPassword = await bycrypt.compare(password, user._password);
+        const validPassword = await bycrypt.compare(password, user.password);
         if (!validPassword) {
             return res.status(401).send('Password is incorrect');
         }

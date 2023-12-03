@@ -1,0 +1,208 @@
+.wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+.wrapper::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  border-left: 25vw solid transparent;
+  border-top: 42vw solid #9fb6ccaa;
+}
+.wrapper::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  border-left: 19vw solid transparent;
+  border-top: 32vw solid #1575e399;
+}
+
+.rectangle {
+  height: 10vw;
+  width: 6vw;
+  position: absolute;
+  bottom: 0;
+  border-bottom-left-radius: 40px;
+  background-color: #9fb6ccaa;
+}
+.rectangle::after {
+  content: '';
+  bottom: -1px;
+  position: absolute;
+  border-left: 6.15vw solid transparent;
+  border-top: 10.3vw solid rgb(247, 249, 254);
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 40px;
+  display: flex;
+  position: relative;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.profile-card {
+  position: relative;
+  height: 50vh;
+  max-height: 400px;
+  min-height: 300px;
+  width: 19vw;
+  min-width: 230px;
+  padding: 20px 0px 15px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  font-size: 17px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px 5px rgba(30, 50, 85, 0.03);
+}
+
+.avatar {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+.ava-frame {
+  margin: auto;
+  height: 200px;
+}
+.ava-img {
+  height: 120px;
+  position: absolute;
+  border-radius: 2px;
+  top: 1.5px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.rank {
+  height: 40px;
+  width: 150px;
+  margin: 5px 0px;
+  font-size: 14px;
+  border-radius: 20px;
+  background-color: #e1e6ed;
+}
+.rank:hover {
+  cursor: pointer;
+  background-color: #d6dbe4;
+}
+
+.profile-info {
+  max-height: 555px;
+  width: 59%;
+  min-width: 370px;
+  box-sizing: border-box;
+  padding: 0px 20px;
+  margin-bottom: 40px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px 5px rgba(30, 50, 85, 0.03);
+  background-color: #fff;
+}
+
+.title {
+  font-size: 24px;
+  padding: 20px 10px 10px 5px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table td {
+  padding: 10px;
+}
+.table td:first-child {
+  width: 38%;
+  font-weight: 600;
+  border-radius: 10px 0 0 10px;
+}
+.table td:last-child {
+  border-radius: 0 10px 10px 0;
+}
+.table tr:nth-child(odd) {
+  border-radius: 10px;
+  background-color: #f3f8fe;
+}
+
+.money {
+  max-width: 600px;
+  margin: 5px 0px 10px 5px;
+  display: flex;
+  align-items: center;
+}
+.balance {
+  border-bottom: 55px solid #f9f64b;
+  border-right: 30px solid transparent;
+  height: 0;
+  width: 100px;
+  min-width: 75px;
+  padding-left: 15px;
+  color: #777;
+  border-radius: 15px 0px 0px 15px;
+}
+
+.balance-icon {
+  font-size: 19px;
+  color: #666;
+  display: inline;
+}
+
+.deposit {
+  border-top: 55px solid #23d355;
+  border-left: 30px solid transparent;
+  height: 0;
+  width: 125px;
+  min-width: 100px;
+  border-radius: 0px 15px 15px 0px;
+  transition: 0.15s;
+  outline: none;
+}
+.deposit::after {
+  position: relative;
+  top: -37px;
+  left: -5px;
+  content: 'Nạp tiền';
+  font-size: 17px;
+  font-weight: 600;
+}
+.deposit:hover {
+  cursor: pointer;
+  border-top: 55px solid #21be4d;
+}
+.history {
+  margin: auto;
+  padding: 10px;
+}
+.history:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@media (max-width: 655px) {
+  .profile-info {
+    width: 80%;
+  }
+}
+
+@media (max-width: 530px) {
+  .profile-card {
+    height: 40vh;
+  }
+  .profile-info {
+    width: 80%;
+  }
+  .rectangle {
+    display: none;
+  }
+}
