@@ -12,7 +12,7 @@ function Print() {
                 <option value="4">Mục 4</option>
                 <option value="5">Mục 5</option>
             </select>
-            <button >Đóng</button>
+            <button >Close</button>
         </div>
         <input type="file" id="myfile"></input>
         <button id="deleteFile">Delete file</button>
