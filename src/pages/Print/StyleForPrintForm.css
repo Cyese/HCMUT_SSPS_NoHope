@@ -10,12 +10,12 @@ body {
   color: white;
   width: 200px;
   padding: 10px;
-  display: flex; /* Bật chế độ flexbox */
-  flex-direction: column; /* Sắp xếp các mục theo cột */
-  align-items: center; /* Căn giữa các mục theo hướng ngang */
-  justify-content: center; /* Căn giữa các mục theo hướng dọc */
-  border-radius: 10px; /* Bo góc của thanh bên */
-  height: 100vh; /* Chiều dài của thanh bên bằng với chiều cao của cửa sổ trình duyệt */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  height: 100vh; 
 }
 
 
@@ -36,28 +36,75 @@ body {
 
 
 .sidebar img {
-  width: 100px; /* Đặt chiều rộng của hình ảnh */
-  height: 100px; /* Đặt chiều cao của hình ảnh */
-  border-radius: 50%; /* Làm cho hình ảnh tròn */
-  object-fit: cover; /* Đảm bảo hình ảnh luôn vừa với khung hình tròn */
-  margin-bottom: 50px; /* Thêm không gian trống ở dưới hình ảnh */
+  width: 100px; 
+  height: 100px; 
+  border-radius: 50%; 
+  object-fit: cover; 
+  margin-bottom: 50px; 
   margin-top: 10px;
 }
 
 #drop_zone {
-  width: 100vw; /* Chiều rộng của #drop_zone bằng với chiều rộng của cửa sổ trình duyệt */
-  height: 100vh; /* Chiều cao của #drop_zone bằng với chiều cao của cửa sổ trình duyệt */
+  width: 100vw; 
+  height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px 15px 15px 15px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
 }
 
 button {
-  margin-top: 10px; /* Khoảng cách phía trên */
+  margin-top: 10px; 
   margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 1px solid #000; 
+  border-radius: 3px 3px 3px 3px;
+  background-color: #e5e5e5;
+  padding: 3px 3px 4px 4px; 
+  font-size: 12px;
+  cursor: pointer; 
+}
+
+button:hover {
+  background-color: #ddd; 
+}
+
+button:active {
+  background-color: #cac8c8; 
+}
+
+#choosePrint {
+  margin-left: 0px;
 }
 
 #deleteFile {
-  margin-left: 250px;
+  margin-left: 594px;
 }
 
 #preview {
-  margin-left: 900px;
+  margin-left: 889px;
+}
+
+#choosePrint_ChooseFile_DeleteFile_ButtonGroup {
+  display: flex;
+}
+
+#previewAndPrintButtonGroup {
+  display: flex;
+}
+
+#myfile {
+  margin-top: 10px; 
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 1px solid #000; 
+  border-radius: 3px 3px 3px 3px;
+  background-color: #e5e5e5;
+  padding: 3px 3px 4px 4px; 
+  font-size: 12px;
+  cursor: pointer;
 }
