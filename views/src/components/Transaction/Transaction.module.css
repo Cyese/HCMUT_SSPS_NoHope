@@ -1,0 +1,106 @@
+.wrapper {
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.2);
+  align-items: center;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  height: 80%;
+  width: 40%;
+  min-width: 340px;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 15px;
+  scale: 0.5;
+  opacity: 0;
+  transform-origin: top left;
+  animation: showpopup 0.23s ease-out forwards;
+}
+@keyframes showpopup {
+  100% {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+.header {
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.content {
+  padding: 10px 20px;
+  height: 75%;
+  overflow-y: scroll;
+}
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+.content table tr:first-child {
+  border-bottom: 1px solid #ccc;
+}
+.content table tr {
+  transition: 0.15s;
+}
+.content table tr:hover {
+  background-color: #eee;
+}
+.content table th {
+  line-height: 1;
+  padding: 10px 0px;
+  color: dodgerblue;
+}
+.content table th:last-child {
+  text-align: right;
+  padding-right: 15px;
+}
+.content table td {
+  line-height: 1;
+  padding: 10px 0px;
+}
+.content table td:last-child {
+  text-align: right;
+  padding-right: 10px;
+  font-weight: 500;
+  color: #888;
+}
+.content table td:last-child.yellow {
+  color: #efdc09;
+}
+.content table td:last-child.yellow::before {
+  content: '+';
+}
+
+.cancel-btn {
+  position: absolute;
+  right: 20px;
+  bottom: 14px;
+  width: 50px;
+  padding: 6px;
+  border-radius: 12px;
+  font-size: 14px;
+  color: white;
+  background-color: #0088ff;
+  border: 2px solid #0088ff;
+  transition: 0.25s;
+}
+
+.cancel-btn:hover {
+  color: #0088ff;
+  background-color: transparent;
+  border: 2px solid #0088ff;
+  cursor: pointer;
+}
