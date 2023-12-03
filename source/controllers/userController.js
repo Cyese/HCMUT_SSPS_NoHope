@@ -51,33 +51,33 @@ class userController {
             const user = await Users.findOne({ ID: data.user_id });
             const printer = await Printer.findOne({ ID: data.printer_id });
     
-            if (user._PaperLeft < data.file_page) {
+            if (user.PaperLeft < data.file_page) {
                 return res.status(409).send('User not enough paper left');
             }
     
-            if (printer._PaperLeft < data.file_page) {
+            if (printer.PaperLeft < data.file_page) {
                 return res.status(409).send('Printer not enough paper left');
             }
     
             // Update user and printer data
             await Users.updateOne({ ID: data.user_id }, {
                 $inc: {
-                    _PaperLeft: -data.file_page,
-                    _TotalUsed: data.file_page
+                    PaperLeft: -data.file_page,
+                    TotalUsed: data.file_page
                 }
             });
     
             await Printer.updateOne({ ID: data.printer_id }, {
                 $inc: {
-                    _PaperLeft: -data.file_page
+                    PaperLeft: -data.file_page
                 }
             });
     
             // Create log entry
-            const log = new Log({
+            const log = new Logs({
                 id: mongoose.Types.ObjectId(),
-                RequestedBy: user._UserId,
-                PrintedBy: printer._PrinterID,
+                RequestedBy: user_id,
+                PrintedBy: printer.PrinterID,
                 Date: new Date(),
                 FileName: data.file_name,
                 PaperQuantity: data.file_page

@@ -10,7 +10,7 @@ class printerController {
             .catch(next);
     }
     makeMockData(req, res, next){
-        res.send("Create mock data for printer")
+        res.status(403).send({ msg: "Create mock data for printer"});
         // // mock data for H1
         // let printer = new Printer({
         //     PrinterID: '0001',
@@ -132,56 +132,56 @@ class printerController {
         res.send('Mock data created');
     }
 
-    makeMockLog(req, res, next){
-        // let UserData = User.find({}).then((users) => {
-        //     const startDate = new Date('2022-11-01');
-        //     const endDate = new Date('2022-12-01');
-        //     const startHour = 9;
-        //     const endHour = 17;
-        //     const listOfPrinter = [
-        //         '0001', '0002', '0003',
-        //         '0004', '0005', '0006',
-        //         '0007', '0008', '0009',
-        //         '0010', '0011', '0012',
-        //         '0013', '0014', '0015',
-        //         '0016', '0017', '0018',
-        //         '0019'
-        //     ];
-        //     const subjectName = [
-        //         'Calculus1', 'Physics1', 'Chemistry',
-        //         'Calculus2', 'Physics2', 'IntroductionToProgramming',
-        //         'Calculus3', 'Physics3', 'DataStructureAndAlgorithm',
-        //         'DiscreteMathematics', 'ObjectOrientedProgramming',
-        //         'ComputerArchitecture', 'OperatingSystem',
-        //         'DatabaseSystem', 'ComputerNetwork',
-        //     ]
-        //     const format = [ '.png', '.docx', '.pdf', '.pptx', '.xlsx']
-        //     users.forEach((user) => {
-        //         let ID = user.UserID;
-        //         let Paper = user.TotalUsed;
-        //         let Average = Math.floor(Paper / (Math.floor(Paper / 13)));
-        //         while (Paper > 0) {
-        //             let Used = Math.floor(Math.random() * (Average - 1) + 1);
-        //             Paper -= Used;
-        //             let PrintedBy = listOfPrinter[Math.floor(Math.random() * listOfPrinter.length)];
+    async makeMockLog(req, res, next){
+        res.status(304).send("Forbidden");
+        return;
+        let UserData = await User.find({}).then((users) => {
+            const startDate = new Date('2023-11-01');
+            const endDate = new Date('2023-12-04');
+            const startHour = 9;
+            const endHour = 17;
+            const listOfPrinter = [
+                '0001', '0002', '0003',
+                '0004', '0005', '0006',
+                '0007', '0008', '0009',
+                '0010', '0011', '0012',
+                '0013', '0014', '0015',
+                '0016', '0017', '0018',
+                '0019'
+            ];
+            const subjectName = [
+                'Calculus1', 'Physics1', 'Chemistry',
+                'Calculus2', 'Physics2', 'IntroductionToProgramming',
+                'Calculus3', 'Physics3', 'DataStructureAndAlgorithm',
+                'DiscreteMathematics', 'ObjectOrientedProgramming',
+                'ComputerArchitecture', 'OperatingSystem',
+                'DatabaseSystem', 'ComputerNetwork',
+            ]
+            const format = [ '.png', '.docx', '.pdf', '.pptx', '.xlsx']
+            users.forEach((user) => {
+                let ID = user.UserID;
+                let Paper = user.TotalUsed;
+                let Average = Math.floor(Paper / (Math.floor(Paper / 13)));
+                while (Paper > 0) {
+                    let Used = Math.floor(Math.random() * (Average - 1) + 1);
+                    Paper -= Used;
+                    let PrintedBy = listOfPrinter[Math.floor(Math.random() * listOfPrinter.length)];
             
-        //             let randomDate = new Date(startDate.getTime() + Math.random() * (endDate.getTime() - startDate.getTime()));
-        //             randomDate.setHours(Math.floor(Math.random() * (endHour - startHour + 1)) + startHour);
-        //             let randomDocument = subjectName[Math.floor(Math.random() * subjectName.length)] + format[Math.floor(Math.random() * format.length)];  
-        //             let log = new Log({
-        //                 RequestedBy: ID,
-        //                 Date: randomDate,
-        //                 PrintedBy: PrintedBy,
-        //                 FileName: randomDocument,
-        //                 PaperQuantity: Used
-        //             });
-        //             log.save();
-        //             // console.log(randomDate);
-        //         }
-        //     });
-        // });
-
-
+                    let randomDate = new Date(startDate.getTime() + Math.random() * (endDate.getTime() - startDate.getTime()));
+                    randomDate.setHours(Math.floor(Math.random() * (endHour - startHour + 1)) + startHour);
+                    let randomDocument = subjectName[Math.floor(Math.random() * subjectName.length)] + format[Math.floor(Math.random() * format.length)];  
+                    let log = new Log({
+                        RequestedBy: ID,
+                        Date: randomDate,
+                        PrintedBy: PrintedBy,
+                        FileName: randomDocument,
+                        PaperQuantity: Used
+                    });
+                    log.save();
+                    // console.log(randomDate);
+                }
+            });
+        });
         res.send("Create mock data for log");
     }
 }

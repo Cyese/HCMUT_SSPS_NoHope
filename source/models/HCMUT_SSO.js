@@ -1,5 +1,5 @@
 /* Maybe not needed for current project*/
-
+/*
 const mongoose = require('mongoose');
 const info = new mongoose.Schema({
     ID: {
@@ -17,3 +17,4 @@ const info = new mongoose.Schema({
 });
 
 module.exports = mongoose.model('hcmutsso', info);
+*/
