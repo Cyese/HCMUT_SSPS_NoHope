@@ -26,12 +26,16 @@ const Login = () => {
         ID: UserID,
         password: password,
       };
-      const res = await axios.post('/api/auth/login', data);
+      const res = await axios.post('/auth/login', data);
       if (res && res.UserID) {
         login(res.UserID);
         navigate('/');
-      } else if (res && res.status === 400) {
-        alert('Wrong Id or password !');
+      }else if (res && res.status === 404) {
+        alert('User id not found !');
+        return;
+      } 
+      else if (res && res.status === 401) {
+        alert('Password is incorrect !');
         return;
       }
     }
