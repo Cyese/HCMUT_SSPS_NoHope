@@ -3,7 +3,7 @@
     "$oid": "656972103b68f9639c81c05a"
   },
   "UserID": "2181367",
-  "password": "123456",
+  "password": "$2b$08$Qq/uhczdkkhin8pfEcL/qOJ.tcAh2/oZvi8RXNAW0mxi3/agg.rkm",
   "Name": "Nguyen Van A",
   "PaperLeft": 999,
   "TotalUsed": 1,
@@ -19,7 +19,7 @@
     "$oid": "656972103b68f9639c81c05b"
   },
   "UserID": "2162936",
-  "password": "123456",
+  "password": "$2b$08$HVicbrzLyR1Or5W.JNbPaOvHQzxqSS4TaVSDcAMdQRz5KNBzlfPaK",
   "Name": "Nguyen Van A",
   "PaperLeft": 750,
   "TotalUsed": 250,
@@ -35,7 +35,7 @@
     "$oid": "656972103b68f9639c81c05c"
   },
   "UserID": "2167670",
-  "password": "123456",
+  "password": "$2b$08$JMyIuStHiDFFqbktAgJrpuN.jdY6AblU11Ef/kFnYk1A343dc2My6",
   "Name": "Nguyen Van A",
   "PaperLeft": 220,
   "TotalUsed": 780,
@@ -51,7 +51,7 @@
     "$oid": "656972103b68f9639c81c05f"
   },
   "UserID": "2121823",
-  "password": "123456",
+  "password": "$2b$08$IN3T6Un/jln1HpJAY4sOMO7S2GJfUL1yUvOn1ofZWcfNgCsiUDATu",
   "Name": "Nguyen Van A",
   "PaperLeft": 929,
   "TotalUsed": 71,
@@ -67,7 +67,7 @@
     "$oid": "656972103b68f9639c81c060"
   },
   "UserID": "2103521",
-  "password": "123456",
+  "password": "$2b$08$3YUj7YRYbvtMlXoYZs542.Y5tjX85m2SVadlnyT3GkVvGj/qEI//6",
   "Name": "Nguyen Van A",
   "PaperLeft": 207,
   "TotalUsed": 793,
@@ -83,7 +83,7 @@
     "$oid": "656972103b68f9639c81c061"
   },
   "UserID": "2176106",
-  "password": "123456",
+  "password": "$2b$08$SHZJeRQSKEBySLivBZU0.u374D/RVxFkRuP4QTALylY7cgy2IrVNi",
   "Name": "Nguyen Van A",
   "PaperLeft": 360,
   "TotalUsed": 640,
@@ -99,7 +99,7 @@
     "$oid": "656972103b68f9639c81c062"
   },
   "UserID": "2170914",
-  "password": "123456",
+  "password": "$2b$08$aWAo7cwlwcaqPWV0RvLkTOu.LyhbLffCLwzDxQbb4A/j9nmtZghuK",
   "Name": "Nguyen Van A",
   "PaperLeft": 216,
   "TotalUsed": 784,
@@ -115,7 +115,7 @@
     "$oid": "656972103b68f9639c81c063"
   },
   "UserID": "2194061",
-  "password": "123456",
+  "password": "$2b$08$jr3.maacsOqnnZjwHuQ4buMI5eJ32gEp4.h1x0fFSKwSkwvJmEUOO",
   "Name": "Nguyen Van A",
   "PaperLeft": 649,
   "TotalUsed": 351,
@@ -131,7 +131,7 @@
     "$oid": "656972103b68f9639c81c064"
   },
   "UserID": "2167727",
-  "password": "123456",
+  "password": "$2b$08$c5jowBuDlni3UXoh1Nw5iugwwvjcqf/jVcdrI0hciKUUj2aV4XfCK",
   "Name": "Nguyen Van A",
   "PaperLeft": 24,
   "TotalUsed": 976,
@@ -147,7 +147,7 @@
     "$oid": "656972103b68f9639c81c05d"
   },
   "UserID": "2126270",
-  "password": "123456",
+  "password": "$2b$08$2uNF0EmPXuS9yK3OgbfW8.BMIkxz.LivXeRQMGrCVk8p8.mkTZpiq",
   "Name": "Nguyen Van A",
   "PaperLeft": 452,
   "TotalUsed": 548,
@@ -163,7 +163,7 @@
     "$oid": "656972103b68f9639c81c05e"
   },
   "UserID": "2171731",
-  "password": "123456",
+  "password": "$2b$08$2pDRUgPIrcF512X3MihKvexacWvDqdKvMpwsOfnYL4EswLnrXKzNC",
   "Name": "Nguyen Van A",
   "PaperLeft": 731,
   "TotalUsed": 269,
@@ -179,7 +179,7 @@
     "$oid": "656972103b68f9639c81c067"
   },
   "UserID": "2123619",
-  "password": "123456",
+  "password": "$2b$08$BZLSRcKnERZ2VtCR3bwYve/WnL3qEUCtfbXGqxZB.vHWRSdxKEEMu",
   "Name": "Nguyen Van A",
   "PaperLeft": 913,
   "TotalUsed": 87,
@@ -195,7 +195,7 @@
     "$oid": "656972103b68f9639c81c068"
   },
   "UserID": "2110731",
-  "password": "123456",
+  "password": "$2b$08$zcLCJ7Smd9YUb.HQQ0D8fOFk5nGmG8eltJubSesrIiVNSrj7QlVKm",
   "Name": "Nguyen Van A",
   "PaperLeft": 352,
   "TotalUsed": 648,
@@ -211,7 +211,7 @@
     "$oid": "656972103b68f9639c81c069"
   },
   "UserID": "2184489",
-  "password": "123456",
+  "password": "$2b$08$DXev.ZQQMg/IY5zsTrVwd.YHEX1so.hokEOD6.kzK2N//fADA1yyu",
   "Name": "Nguyen Van A",
   "PaperLeft": 93,
   "TotalUsed": 907,
@@ -227,7 +227,7 @@
     "$oid": "656972103b68f9639c81c06a"
   },
   "UserID": "2125321",
-  "password": "123456",
+  "password": "$2b$08$AsXYUegjjiFrA48GcFDEke/.X1zHGTSH/Bp2Z.roouUZ8ECuQorpC",
   "Name": "Nguyen Van A",
   "PaperLeft": 359,
   "TotalUsed": 641,
@@ -243,7 +243,7 @@
     "$oid": "656972103b68f9639c81c06b"
   },
   "UserID": "2140568",
-  "password": "123456",
+  "password": "$2b$08$i/UVYoSpxbIK6fcQ9uC3m.3nX3vZ34MoW7g/MkLBNhZECCjfDASbK",
   "Name": "Nguyen Van A",
   "PaperLeft": 462,
   "TotalUsed": 538,
@@ -259,7 +259,7 @@
     "$oid": "656972103b68f9639c81c06c"
   },
   "UserID": "2150488",
-  "password": "123456",
+  "password": "$2b$08$attyRGEQeOV7XFF/q3L2BONdbDK6jMg7GlHj04E8Rf/NUUtI17T.i",
   "Name": "Nguyen Van A",
   "PaperLeft": 130,
   "TotalUsed": 870,
@@ -275,7 +275,7 @@
     "$oid": "656972103b68f9639c81c06d"
   },
   "UserID": "2158174",
-  "password": "123456",
+  "password": "$2b$08$sbyFkaOMr1uUA7JYu6wETeg5lOyi4qxIzCOAGLMyuGBokBIjLy/Aq",
   "Name": "Nguyen Van A",
   "PaperLeft": 603,
   "TotalUsed": 397,
@@ -291,7 +291,7 @@
     "$oid": "656972103b68f9639c81c065"
   },
   "UserID": "2136784",
-  "password": "123456",
+  "password": "$2b$08$J9zOYQR718bXp/jd053UT.W88ymjzIyyXdgQPvCmiZZvI8DuDpfoi",
   "Name": "Nguyen Van A",
   "PaperLeft": 944,
   "TotalUsed": 56,
@@ -307,7 +307,7 @@
     "$oid": "656972103b68f9639c81c066"
   },
   "UserID": "2193260",
-  "password": "123456",
+  "password": "$2b$08$2Y8Drc2AjT/R7lo6xkwIe.qE6xu8hSIuaH1fWSsRloxA1ZDNPbMfC",
   "Name": "Nguyen Van A",
   "PaperLeft": 655,
   "TotalUsed": 345,

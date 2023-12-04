@@ -16,13 +16,49 @@ This project aims at providing a solution for HCMUT's student needs for printing
     git clone https://github.com/Cyese/HCMUT_SSPS_NoHope
     ```
 1. Install dependencies:
-    ```sh
-    npm install
+    * Window ***command prompt*** 
+    ```cmd
+    init.cmd
     ```
+    * UNIX based system ***bash/zsh***
+    ```bash
+    ./init.sh
+    ```
+1. Import data into your local database:
+    #### Using MongoDB compass
+    1. Open MongoDB compass
+    1. Create a new **Connection** with this URI
+    ```link
+    mongodb://localhost:27017
+    ```
+    3. Create a new database name **hcmut_spss_dev**
+    4. Click on **import data** and choose *.json* file in 
+    #### Using Mongossh
+    ***To be implemented***
 ### Usage
-Start the system:
+1. Start server app:
 ```sh
 npm start
+```
+2. Create another prompt and run:
+```cmd
+cd source\views\ && npm start 
+```
+or 
+```sh
+cd source/views/ && npm start
+```
+#### You can launch the app on 
+```url
+localhost:3000
+```
+3. If you have root permission on bash you can also use this command to run it in default HTTP port
+```bash
+cd source/views/ && sudo npm run deploy 
+```
+#### Which make your app can be access through
+```url
+localhost
 ```
 ## Related Document
 * [Report](https://www.overleaf.com/2221145485dckzkxcqhqwp) 

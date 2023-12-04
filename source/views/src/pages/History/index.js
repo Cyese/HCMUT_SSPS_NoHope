@@ -1,7 +1,7 @@
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../../utils/context/userContext';
-
 import PositionCard from '../../components/PositionCard';
+import axios from '../../utils/api/axios';
 
 import classNames from 'classnames/bind';
 import styles from './History.module.css';
@@ -10,6 +10,21 @@ const cx = classNames.bind(styles);
 
 function History() {
   const { user } = useContext(UserContext);
+
+  const [userHistory, setUserHistory] = useState([]);
+  useEffect(async ()=>{
+    if (user.admin){
+
+    }
+    else{
+      const res = await axios.get('/user/getLog', user.UserID);
+      if (res) {
+        setUserHistory(res);
+      } else if (res && res.status === 400) {
+        return;
+      }
+    }
+  },[]);
 
   const data = [
     { no: 1, date: '01/03/3255', document: 'a.jpg', numpaper: 100, status: true },
@@ -54,14 +69,14 @@ function History() {
                   <th>Ngày in</th>
                   <th>Danh sách tài liệu</th>
                   <th>Tổng số giấy</th>
-                  <th>Tình trạng</th>
+                  // <th>Tình trạng</th>
                 </tr>
-                {data.map((item, index) => (
+                {userHistory.map((item, index) => (
                   <tr key={index}>
-                    <td>{item.no}</td>
-                    <td>{item.date}</td>
-                    <td>{item.document}</td>
-                    <td>{item.numpaper}</td>
+                    <td>{index + 1}</td>
+                    <td>{item.Date}</td>
+                    <td>{item.FileName}</td>
+                    <td>{item.PaperQuantity}</td>
                     {item.status ? <td className={cx('done')}>&#x2713;</td> : <td className={cx('fail')}>&times;</td>}
                   </tr>
                 ))}

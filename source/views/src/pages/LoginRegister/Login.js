@@ -5,29 +5,31 @@ import { NavLink } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import { UserContext } from '../../utils/context/userContext';
-// import axios from '../../utils/api/axios';
+import axios from '../../utils/api/axios';
 
 const Login = () => {
   const navigate = useNavigate();
-  const [mssv, setMssv] = useState('');
+  const [UserID, setUserID] = useState('');
   const [password, setPassword] = useState('');
   const { login } = useContext(UserContext);
 
-  const handleLogin = () => {
-    if (!mssv || !password) {
+  const handleLogin = async () => {
+    if (!UserID || !password) {
       alert('Missing value !');
       return;
     }
-    // const res = axios.post('/');
-    // if (res && res.token) {
-    //   localStorage.setItem('token', res.token);
-    //   login(mssv, res.token);
-    login(mssv);
-    navigate('/');
-    // } else if (res && res.status === 400) {
-    //   alert('Wrong mssv or password !');
-    //   return;
-    // }
+    const data = {
+      ID: UserID,
+      password: password,
+    };
+    const res = await axios.post('/api/auth/login', data);
+    if (res && res.UserID) {
+      login(res.UserID);
+      navigate('/');
+    } else if (res && res.status === 400) {
+      alert('Wrong Id or password !');
+      return;
+    }
   };
 
   return (
@@ -113,8 +115,8 @@ const Login = () => {
               }}
               inputMode="numeric"
               maxLength="7"
-              onChangeText={(value) => setMssv(value)}
-              value={mssv}
+              onChangeText={(value) => setUserID(value)}
+              value={UserID}
             />
 
             <Text
