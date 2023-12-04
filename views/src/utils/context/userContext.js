@@ -1,29 +1,24 @@
 import React, { useState } from 'react';
 
-const UserContext = React.createContext({ mssv: '', loggedin: false, admin: false });
+const UserContext = React.createContext({ UserID: '', loggedin: false, admin: false });
 
 function UserProvider({ children }) {
-  const [user, setUser] = useState({ mssv: '', loggedin: false, admin: false });
+  const [user, setUser] = useState({ UserID: '', loggedin: false, admin: false });
 
-  const login = (mssv, token) => {
-    var isadmin;
-    if (mssv === '1') isadmin = true;
-    else isadmin = false;
-
+  const login = (UserID) => {
+    const isadmin = UserID === 1 ? true : false;
     setUser({
-      mssv: mssv,
+      UserID: UserID,
       loggedin: true,
       admin: isadmin,
     });
-    localStorage.setItem('mssv', mssv);
-    // localStorage.setItem('token', token);
+    localStorage.setItem('UserID', UserID);
   };
 
   const logout = () => {
-    localStorage.removeItem('mssv');
-    // localStorage.removeItem('token');
+    localStorage.removeItem('UserID');
     setUser({
-      mssv: '',
+      UserID: '',
       loggedin: false,
       admin: false,
     });

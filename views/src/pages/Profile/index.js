@@ -1,15 +1,15 @@
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import { UserContext } from '../../utils/context/userContext';
 import Transaction from '../../components/Transaction';
 import Deposit from '../../components/Deposit';
+import axios from '../../utils/api/axios';
 
-import classNames from 'classnames/bind';
-import styles from './Profile.module.css';
 import printer from '../../assets/printer.png';
 import avatar from '../../assets/avatar.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBitcoinSign, faMedal } from '@fortawesome/free-solid-svg-icons';
-
+import classNames from 'classnames/bind';
+import styles from './Profile.module.css';
 const cx = classNames.bind(styles);
 
 function Profile() {
@@ -17,7 +17,6 @@ function Profile() {
 
   const [show1, setShow1] = useState(false);
   const [show2, setShow2] = useState(false);
-
   const handleCancel1 = () => {
     setShow1(false);
   };
@@ -25,14 +24,23 @@ function Profile() {
     setShow2(false);
   };
 
+  const [userInfo, setUserInfo] = useState({});
+  useEffect(() => {
+    const getUser = async () => {
+      const res = await axios.get('/user', user.UserID);
+      if (res) setUserInfo(res);
+    };
+    getUser();
+  }, []);
+
   const info = [
-    { label: 'Username', data: 'User.name123' },
+    { label: 'Username', data: userInfo.Name },
     { label: 'Gender', data: 'Male' },
-    { label: 'Birthdate', data: 'dd/mm/yyyy' },
+    { label: 'Birthdate', data: userInfo.Birthdate  },
     { label: 'Position', data: 'Student' },
     { label: 'Major', data: 'CSE' },
-    { label: 'Email', data: 'abc@hcmut.edu.vn' },
-    { label: 'Number', data: '090909090' },
+    { label: 'Email', data: userInfo.Email },
+    { label: 'Number', data: userInfo.ContactNumber },
   ];
 
   return user.loggedin ? (
@@ -47,8 +55,8 @@ function Profile() {
             <img className={cx('ava-img')} src={avatar} alt="avatar" />
           </div>
           <h3>
-            2112112 <br />
-            Nguyen Van A
+            {userInfo.UserID} <br />
+            {userInfo.Name}
           </h3>
           <button className={cx('rank')}>
             <FontAwesomeIcon icon={faMedal} />
