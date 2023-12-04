@@ -4,7 +4,7 @@ const Printer = require('../models/printer');
 const { multipleMongooseObject } = require('../util/mongoose');
 class userController {
     async show(req, res, next) {
-        const user = await Users.findOne({ UserID: req.body.UserID })
+        const user = await Users.findOne({ UserID: req.params.UserID })
         const userInfo = {
             UserID: user.UserID,
             name: user.Name,
@@ -17,8 +17,8 @@ class userController {
         return res.status(200).send(userInfo);
     }
     async getLog(req, res) {
-        const userID = req.body.UserID
-        if(!userID) return res.sendStatus(400)
+        const userID = req.params.UserID;
+        if(!userID) return res.sendStatus(400);
         Logs.find({ RequestedBy: userID}).limit(10)
             .then((log) => res.send(multipleMongooseObject(log)))
             .catch(err => res.send({message: err}))
