@@ -22,13 +22,11 @@ function PositionHistory() {
   ]);
   useEffect(() => {
     const getPrinterHistory = async () => {
-      console.log('>>> check : ', params.position);
       const res = await axios.get('/spso/printerHistory', params.position);
       const history = [];
       for (const key in res) {
         history.push(res[key]);
       }
-      console.log('>>> check history: ', history);
       if (res) setPrinterHistory(history);
     };
     getPrinterHistory();
