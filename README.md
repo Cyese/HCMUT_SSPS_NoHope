@@ -69,6 +69,7 @@ This project aims at providing a solution for HCMUT's student needs for printing
 ## Related Document
 * [Report](https://www.overleaf.com/read/qffzghfpxbwp#7382a2): Written in Vietnamese
 * [Diagram](https://drive.google.com/file/d/1jbRXG59iD57gZ3vsaZh-R-1fB8YuCRUg/view?usp=sharing): Can be view from draw.io
+* [Shared storage](https://drive.google.com/drive/folders/1T8vE8RZ2W1LZoGF49q56EcJVNknD9Pmh?usp=sharing): required `@hcmut.edu.vn` mail to views
 * [Database](./docs/database)
 * [Task distribution](./docs/other/Task.xlsx)
 * [How to use](./docs/other/guide.pdf)

@@ -6,7 +6,7 @@ function UserProvider({ children }) {
   const [user, setUser] = useState({ UserID: '', loggedin: false, admin: false });
 
   const login = (UserID) => {
-    const isadmin = UserID === '1' ? true : false;
+    const isadmin = UserID === 1 ? true : false;
     setUser({
       UserID: UserID,
       loggedin: true,

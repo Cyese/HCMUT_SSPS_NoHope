@@ -47,7 +47,7 @@ function Sidebar() {
             }}
           >
             <FontAwesomeIcon icon={faCircleQuestion} className={cx('help-icon')} />
-            <p className={cx('help-text')}>help</p>
+            <p className={cx('help-text')}>Help</p>
           </button>
           <Help ShowOrHide={show ? 'show' : fade ? 'fade' : 'hide'} onCancel={handleCancel} />
         </>

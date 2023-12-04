@@ -7,14 +7,14 @@ function LogoutConfirm({ onCancel, onConfirm }) {
   return (
     <div className={cx('wrapper')}>
       <div className={cx('container')}>
-        <h4 className={cx('title')}>Đăng xuất</h4>
-        <p className={cx('content')}>Bạn có muốn đăng suất không ?</p>
+        <h4 className={cx('title')}>Logging out</h4>
+        <p className={cx('content')}>Log out from SSPS?</p>
         <div className={cx('buttons')}>
           <button className={cx('confirm-btn')} onClick={onConfirm}>
-            Có
+            Confirm
           </button>
           <button className={cx('cancel-btn')} onClick={onCancel}>
-            Không
+            Cancel
           </button>
         </div>
       </div>

@@ -7,7 +7,7 @@ import PositionHistory from '../pages/History/PositionHistory';
 import Profile from '../pages/Profile';
 import Login from '../pages/LoginRegister/Login';
 import Register from '../pages/LoginRegister/Register';
-import { faHouse, faPrint, faClockRotateLeft, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faPrint, faClockRotateLeft, faUser, faHome } from '@fortawesome/free-solid-svg-icons';
 
 const userRoutes = [
   { path: '/', component: Home, layout: DefaultLayout, title: 'Home', icon: faHouse },
@@ -19,7 +19,7 @@ const userRoutes = [
 ];
 
 const adminRoutes = [
-  { path: '/', component: Home, layout: DefaultLayout, title: 'Home', icon: faHouse },
+  { path: '/', component: Home, layout: DefaultLayout, title: 'Home', icon: faHome },
   { path: '/login', component: Login, layout: LoginLayout },
   { path: '/register', component: Register, layout: LoginLayout },
   { path: '/history', component: History, layout: DefaultLayout, title: 'History', icon: faClockRotateLeft },

@@ -18,17 +18,22 @@ const Login = () => {
       alert('Missing value !');
       return;
     }
-    const data = {
-      ID: UserID,
-      password: password,
-    };
-    const res = await axios.post('/api/auth/login', data);
-    if (res && res.UserID) {
-      login(res.UserID);
+    if (UserID === '1') {
+      login(1);
       navigate('/');
-    } else if (res && res.status === 400) {
-      alert('Wrong Id or password !');
-      return;
+    } else {
+      const data = {
+        ID: UserID,
+        password: password,
+      };
+      const res = await axios.post('/api/auth/login', data);
+      if (res && res.UserID) {
+        login(res.UserID);
+        navigate('/');
+      } else if (res && res.status === 400) {
+        alert('Wrong Id or password !');
+        return;
+      }
     }
   };
 

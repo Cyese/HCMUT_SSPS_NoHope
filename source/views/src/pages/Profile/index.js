@@ -24,24 +24,23 @@ function Profile() {
     setShow2(false);
   };
 
-  const [userInfo, setUserInfo] = useState();
-  useEffect(async ()=>{
-    const res = await axios.get('/user', user.UserID);
-    if (res) {
-      setUserInfo(res);
-    } else if (res && res.status === 400) {
-      return;
-    }
-  },[]);
+  const [userInfo, setUserInfo] = useState({});
+  useEffect(() => {
+    const getUser = async () => {
+      const res = await axios.get('/user', user.UserID);
+      if (res) setUserInfo(res);
+    };
+    getUser();
+  }, []);
 
   const info = [
-    { label: 'Tên người dùng', data: userInfo?.name },
-    { label: 'Giới tính', data: 'Nam' },
-    { label: 'Ngày sinh', data: userInfo?.BirthDate },
-    { label: 'Chức vụ', data: 'Sinh viên' },
-    { label: 'Khoa', data: 'Máy tính' },
-    { label: 'Email', data: userInfo?.email },
-    { label: 'Sđt', data: userInfo?.contactNumber },
+    { label: 'Username', data: userInfo.Name },
+    { label: 'Gender', data: 'Male' },
+    { label: 'Birthdate', data: userInfo.Birthdate  },
+    { label: 'Position', data: 'Student' },
+    { label: 'Major', data: 'CSE' },
+    { label: 'Email', data: userInfo.Email },
+    { label: 'Number', data: userInfo.ContactNumber },
   ];
 
   return user.loggedin ? (
@@ -56,18 +55,18 @@ function Profile() {
             <img className={cx('ava-img')} src={avatar} alt="avatar" />
           </div>
           <h3>
-            2112112 <br />
-            Nguyen Van A
+            {userInfo.UserID} <br />
+            {userInfo.Name}
           </h3>
           <button className={cx('rank')}>
             <FontAwesomeIcon icon={faMedal} />
-            &nbsp; Hạng bạc
+            &nbsp; Silver
           </button>
         </div>
 
         <div className={cx('profile-info')}>
           <div>
-            <h3 className={cx('title')}>Thông tin</h3>
+            <h3 className={cx('title')}>Info</h3>
             <table className={cx('table')}>
               {info.map((item, index) => (
                 <tr key={index}>
@@ -78,10 +77,10 @@ function Profile() {
             </table>
           </div>
           <div>
-            <h3 className={cx('title')}>Tài khoản</h3>
+            <h3 className={cx('title')}>Account</h3>
             <div className={cx('money')}>
               <div className={cx('balance')}>
-                <span>Số dư:</span> <br />
+                <span>Balance: </span> <br />
                 <h4 className={cx('balance-icon')}>4.500</h4> &nbsp;
                 <FontAwesomeIcon icon={faBitcoinSign} className={cx('balance-icon')} />
               </div>
@@ -97,7 +96,7 @@ function Profile() {
                   setShow1(true);
                 }}
               >
-                Lịch sử giao dịch
+                Transaction history
               </h3>
             </div>
           </div>
@@ -107,7 +106,7 @@ function Profile() {
       {show2 && <Deposit onCancel={handleCancel2} />}
     </div>
   ) : (
-    <h3 style={{ margin: '20px' }}>Bạn cần đăng nhập để xem trang này</h3>
+    <h3 style={{ margin: '20px' }}>This page requires login to access.</h3>
   );
 }
 

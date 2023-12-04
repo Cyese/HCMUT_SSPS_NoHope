@@ -4,7 +4,7 @@ const session = require('express-session')
 const db = require('./config/db');
 const route = require('./routes');
 const app = express();
-
+const cors = require('cors');
 
 // Adding mock data for DB
 const User = require('./models/user');
@@ -28,7 +28,7 @@ app.use(
     })
 );
 app.use(express.json());
-
+app.use(cors);
 route(app);
 
 app.listen(PORT, () => {

@@ -7,7 +7,7 @@ function Deposit({ onCancel }) {
   return (
     <div className={cx('wrapper')}>
       <div className={cx('container')}>
-        <h3 className={cx('header')}>Nạp tiền</h3>
+        <h3 className={cx('header')}>Deposit</h3>
         <div className={cx('content')}>
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/d/d0/QR_code_for_mobile_English_Wikipedia.svg"

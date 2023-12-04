@@ -23,9 +23,9 @@ function PositionCard({ position, numprinter }) {
         <h1>{position}</h1>
       </div>
       <div className={cx('info')}>
-        {numprinter} Máy in
+        {numprinter} Printer
         <button className={cx('button')} onClick={handleClick}>
-          Xem lịch sử
+          View history
         </button>
       </div>
     </div>
