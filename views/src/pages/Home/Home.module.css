@@ -13,3 +13,37 @@
   left: 50%;
   translate: -50% -50%;
 }
+
+main {
+  padding: 36px;
+  max-height: calc(100vh - 56px);
+}
+
+.insights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-gap: 24px;
+  margin-top: 24px;
+  padding-right: 25%;
+}
+
+.insights div {
+  padding: 10px;
+  background: #fff;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  grid-gap: 24px;
+  box-shadow: 0px 0px 10px 5px rgba(30, 50, 85, 0.03);
+}
+
+.insights h3 {
+  color: dodgerblue;
+}
+
+box-icon {
+  width: 40px;
+  height: 40px;
+  font-size: 36px;
+  display: flex;
+}
