@@ -24,10 +24,11 @@ function History() {
   }, []);
 
   // const data = [
-  //   { no: 1, date: '01/03/3255', document: 'a.jpg', numpaper: 100, status: true },
-  //   { no: 2, date: '23/12/2321', document: 'b.pdf', numpaper: 20, status: false },
-  //   { no: 3, date: '04/05/1023', document: 'c.docx', numpaper: 3, status: true },
+  //   { no: 1, Date: '01/03/3255', FileName: 'a.jpg', PaperQuantity: 100, status: true },
+  //   { no: 2, Date: '23/12/2321', FileName: 'b.pdf', PaperQuantity: 20, status: false },
+  //   { no: 3, Date: '04/05/1023', FileName: 'c.docx', PaperQuantity: 3, status: true },
   // ];
+  const totalPaper = userHistory.reduce((result, data) => result + data.PaperQuantity ,0)
 
   return user.loggedin ? (
     user.admin ? (
@@ -71,7 +72,7 @@ function History() {
           </div>
           <div className={cx('total-paper')}>
             <h3>Tổng số giấy: </h3>
-            <h3>300</h3>
+            <h3>{totalPaper}</h3>
           </div>
         </div>
       </div>
