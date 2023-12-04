@@ -27,20 +27,21 @@ function Profile() {
   const [userInfo, setUserInfo] = useState({});
   useEffect(() => {
     const getUser = async () => {
-      const res = await axios.get('/user', user.UserID);
+      const res = await axios.get(`/user/${user.UserID}` );
+      console.log(res);
       if (res) setUserInfo(res);
     };
     getUser();
   }, []);
 
   const info = [
-    { label: 'Username', data: userInfo.Name },
+    { label: 'Username', data: userInfo.name },
     { label: 'Gender', data: 'Male' },
-    { label: 'Birthdate', data: userInfo.Birthdate  },
+    { label: 'Birth date', data: userInfo.BirthDate },
     { label: 'Position', data: 'Student' },
     { label: 'Major', data: 'CSE' },
-    { label: 'Email', data: userInfo.Email },
-    { label: 'Number', data: userInfo.ContactNumber },
+    { label: 'Email', data: userInfo.email },
+    { label: 'Number', data: userInfo.contactNumber },
   ];
 
   return user.loggedin ? (

@@ -16,7 +16,7 @@ function History() {
   useEffect(() => {
     const getlog = async () => {
       if (!user.admin) {
-        const res = await axios.get('/user/getLog', user.UserID);
+        const res = await axios.get(`/user/getLog/${user.UserID}`);
         if (res) setUserHistory(res);
       }
     };
@@ -36,9 +36,9 @@ function History() {
         <div className={cx('container')}>
           <PositionCard position={'H1-101'} numprinter={3} />
           <PositionCard position={'H1-301'} numprinter={3} />
-          <PositionCard position={'H2-101'} numprinter={2} />
-          <PositionCard position={'H3-101'} numprinter={1} />
-          <PositionCard position={'H3-401'} numprinter={2} />
+          <PositionCard position={'H2-101'} numprinter={3} />
+          <PositionCard position={'H3-101'} numprinter={3} />
+          <PositionCard position={'H3-401'} numprinter={3} />
           <PositionCard position={'H6-101'} numprinter={3} />
           <PositionCard position={'H6-602'} numprinter={3} />
         </div>

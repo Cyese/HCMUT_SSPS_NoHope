@@ -17,13 +17,13 @@ function PositionHistory() {
 
   const [printerHistory, setPrinterHistory] = useState( [
     [
-      { no: 1, date: '01/03/3255', document: 'a.jpg', numpaper: 100, status: true },
+      { no: 1, Date: '01/03/3255', FileName: 'a.jpg', PaperQuantity: 100, status: true },
     ],
   ]);
   useEffect(() => {
     const getPrinterHistory = async () => {
-      console.log('>>> check : ', params.position);
       const res = await axios.get('/spso/printerHistory', params.position);
+      console.log('>>> check : ', res);
       const history = [];
       for (const key in res) {
         history.push(res[key]);
@@ -72,10 +72,10 @@ function PositionHistory() {
 
                   {printer.map((info, id) => (
                     <tr key={id}>
-                      <td>{info.no}</td>
-                      <td>{info.date}</td>
-                      <td>{info.document}</td>
-                      <td>{info.numpaper}</td>
+                      <td>{id + 1}</td>
+                      <td>{info.Date}</td>
+                      <td>{info.FileName}</td>
+                      <td>{info.PaperQuantity}</td>
                       <td className={cx('done')}>&#x2713;</td>
                       {/* {info.status ? <td className={cx('done')}>&#x2713;</td> : <td className={cx('fail')}>&times;</td>} */}
                     </tr>
