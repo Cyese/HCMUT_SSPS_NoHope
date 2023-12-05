@@ -6,8 +6,8 @@ import { UserContext } from './utils/context/userContext';
 function App() {
   const { user, login } = useContext(UserContext);
   useEffect(() => {
-    const mssv = localStorage.getItem('mssv');
-    if (mssv) login(mssv);
+    const UserID = localStorage.getItem('UserID');
+    if (UserID) login(UserID);
   }, []);
   const appRoutes = user.admin ? adminRoutes : userRoutes;
   return (

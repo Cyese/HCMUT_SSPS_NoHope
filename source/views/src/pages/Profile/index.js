@@ -27,8 +27,8 @@ function Profile() {
   const [userInfo, setUserInfo] = useState({});
   useEffect(() => {
     const getUser = async () => {
-      const res = await axios.get(`/user/${user.UserID}` );
-      console.log(res);
+      if (!user.UserID) user.UserID = localStorage.getItem('UserID');
+      const res = await axios.get(`/user/${user.UserID}`);
       if (res) setUserInfo(res);
     };
     getUser();
@@ -57,7 +57,7 @@ function Profile() {
           </div>
           <h3>
             {userInfo.UserID} <br />
-            {userInfo.Name}
+            {userInfo.name}
           </h3>
           <button className={cx('rank')}>
             <FontAwesomeIcon icon={faMedal} />
