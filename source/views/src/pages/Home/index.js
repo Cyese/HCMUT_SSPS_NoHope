@@ -1,5 +1,5 @@
 import 'boxicons';
-import { useContext } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import background from '../../assets/home.jpg';
 import { UserContext } from '../../utils/context/userContext';
 
@@ -8,6 +8,7 @@ import { Bar } from 'react-chartjs-2';
 import styles from './Home.module.css';
 
 import { BarElement, CategoryScale, Chart, Legend, LinearScale, Tooltip } from 'chart.js';
+import axios from '../../utils/api/axios';
 
 Chart.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend);
 
@@ -15,6 +16,18 @@ const cx = classNames.bind(styles);
 
 function Home() {
   const { user } = useContext(UserContext);
+
+  const [quantity, setQuantity] = useState({count: 0, totalPrintedPaper: 0});
+  useEffect(() => {
+    if (user.admin){
+      const getQuantity = async ()=>{
+        const res = await axios.get('/spso');
+        if (res) setQuantity(res);
+      }
+      getQuantity();
+    }
+  }, [user.admin]);
+
   return user.loggedin && user.admin ? (
     <div className="Home">
       <main>
@@ -25,14 +38,14 @@ function Home() {
           <div>
             <box-icon classNames={cx('box')} name="copy-alt"></box-icon>
             <span classNames={cx('info')}>
-              <h3>9981</h3>
+              <h3>{quantity.totalPrintedPaper}</h3>
               <p>Printed Pages</p>
             </span>
           </div>
           <div>
             <box-icon classNames={cx('box')} name="printer"></box-icon>
             <span classNames={cx('info')}>
-              <h3>7749</h3>
+              <h3>{quantity.count}</h3>
               <p>Printed Times</p>
             </span>
           </div>

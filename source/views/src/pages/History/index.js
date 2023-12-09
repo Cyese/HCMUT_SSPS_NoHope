@@ -16,19 +16,20 @@ function History() {
   useEffect(() => {
     const getlog = async () => {
       if (!user.admin) {
-        const res = await axios.get('/user/getLog', user.UserID);
+        const res = await axios.get(`/user/getLog/${user.UserID}`);
         if (res) setUserHistory(res);
       }
     };
     getlog();
-  }, []);
+  }, [user.admin]);
 
   // const data = [
   //   { no: 1, Date: '01/03/3255', FileName: 'a.jpg', PaperQuantity: 100, status: true },
   //   { no: 2, Date: '23/12/2321', FileName: 'b.pdf', PaperQuantity: 20, status: false },
   //   { no: 3, Date: '04/05/1023', FileName: 'c.docx', PaperQuantity: 3, status: true },
   // ];
-  const totalPaper = userHistory.reduce((result, data) => result + data.PaperQuantity ,0)
+  let totalPaper;
+  if (!user.admin) totalPaper = userHistory.reduce((result, data) => result + data.PaperQuantity, 0);
 
   return user.loggedin ? (
     user.admin ? (
@@ -36,9 +37,9 @@ function History() {
         <div className={cx('container')}>
           <PositionCard position={'H1-101'} numprinter={3} />
           <PositionCard position={'H1-301'} numprinter={3} />
-          <PositionCard position={'H2-101'} numprinter={2} />
-          <PositionCard position={'H3-101'} numprinter={1} />
-          <PositionCard position={'H3-401'} numprinter={2} />
+          <PositionCard position={'H2-101'} numprinter={3} />
+          <PositionCard position={'H3-101'} numprinter={3} />
+          <PositionCard position={'H3-401'} numprinter={3} />
           <PositionCard position={'H6-101'} numprinter={3} />
           <PositionCard position={'H6-602'} numprinter={3} />
         </div>
@@ -60,7 +61,7 @@ function History() {
                 {userHistory.map((item, index) => (
                   <tr key={index}>
                     <td>{index + 1}</td>
-                    <td>{item.Date}</td>
+                    <td>{item.Date.toString().split('T')[0]}</td>
                     <td>{item.FileName}</td>
                     <td>{item.PaperQuantity}</td>
                     <td className={cx('done')}>&#x2713;</td>
